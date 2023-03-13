@@ -35,7 +35,6 @@ namespace MultiPage_A
         }
         private void btnOption1_Click(object sender, RoutedEventArgs e)
         {
-            
             WindowProduct win1 = new WindowProduct();
             win1.Show();
         }
