@@ -72,8 +72,8 @@ namespace zPage
                 if (messageBoxResult == MessageBoxResult.Yes)
                 {
                     memberRepo.DeleteMember(item.MemberId);
+                    MessageBox.Show("Delete Successfully");
                 }
-                MessageBox.Show("Delete Successfully");
             }
             else
             {

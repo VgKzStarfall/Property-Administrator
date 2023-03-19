@@ -3,17 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         xmlns:local="clr-namespace:zPage"
         mc:Ignorable="d"
-        Title="DetailMember" Height="400" Width="559">
+        Title="DetailMember" Height="400" Width="500">
     <Grid>
-        <Label Name="lbName" Content="Label" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221"/>
-        <Label Content="City:" FontSize="20" HorizontalAlignment="Left" Margin="17,89,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbCity" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="200,89,0,0" VerticalAlignment="Top"/>
-        <Label Content="Country:" FontSize="20" HorizontalAlignment="Left" Margin="17,155,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbCountry" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="200,155,0,0" VerticalAlignment="Top"/>
-        <Label Content="Email:" FontSize="20" HorizontalAlignment="Left" Margin="19,216,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbEmail" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="200,216,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbName" Content="Label" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" FontWeight="Bold" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" Foreground="#FFAC18ED"/>
+        <materialDesign:PackIcon Kind="City" Margin="20,98,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
+        <Label Content="City:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,88,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbCity" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,89,0,0" VerticalAlignment="Top"/>
+        <materialDesign:PackIcon Kind="World" Margin="20,166,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
+        <Label Content="Country:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,155,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbCountry" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,155,0,0" VerticalAlignment="Top"/>
+        <materialDesign:PackIcon Kind="Email" Margin="20,228,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
+        <Label Content="Email:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,216,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbEmail" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,216,0,0" VerticalAlignment="Top"/>
         <Button Name="btnUpdate" Content="Update" FontSize="20" HorizontalAlignment="Left" Margin="41,289,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnUpdate_Click"/>
         <Button Name="btnDelete" Content="Delete" FontSize="20" HorizontalAlignment="Left" Margin="228,289,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnDelete_Click"/>
 
