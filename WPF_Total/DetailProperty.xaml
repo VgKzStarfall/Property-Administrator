@@ -1,0 +1,21 @@
+﻿<Window x:Class="zPage.DetailProperty"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zPage"
+        mc:Ignorable="d"
+        Title="DetailProperty" Height="420" Width="400">
+    <Grid>
+        <Label Name="lbName" Content="Label" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221"/>
+        <Label Content="Location:" FontSize="20" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbLocation" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,88,0,0" VerticalAlignment="Top"/>
+        <Label Content="Area:" FontSize="20" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbArea" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,161,0,0" VerticalAlignment="Top"/>
+        <Label Content="Price:" FontSize="20" HorizontalAlignment="Left" Margin="10,242,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbPrice" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,242,0,0" VerticalAlignment="Top"/>
+        <Button Name="btnUpdate" Content="Update" FontSize="20" HorizontalAlignment="Left" Margin="50,322,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnUpdate_Click"/>
+        <Button Name="btnDelete" Content="Delete" FontSize="20" HorizontalAlignment="Left" Margin="236,322,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnDelete_Click"/>
+
+    </Grid>
+</Window>
