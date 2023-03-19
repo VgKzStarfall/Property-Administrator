@@ -1,0 +1,25 @@
+﻿<Window x:Class="zPage.AddUpdateMember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zPage"
+        mc:Ignorable="d"
+        Title="AddUpdateMember" Height="497" Width="500">
+    <Grid>
+        <Label Name="lbTitle" Content="Add A Member" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox Name="txtName" Margin="207,74,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <Label Content="Company Name" HorizontalAlignment="Left" Margin="28,79,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <TextBox Name="txtCity" Margin="207,138,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <Label Content="City" HorizontalAlignment="Left" Margin="28,143,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <TextBox Name="txtCountry" Margin="207,206,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <Label Content="Country" HorizontalAlignment="Left" Margin="28,211,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <TextBox Name="txtPassword" Margin="207,271,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="28,276,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <TextBox Name="txtEmail" Margin="207,335,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="28,340,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="53,402,0,0" FontSize="20" Width="128" Click="btnSubmit_Click" RenderTransformOrigin="0.527,-0.75" Height="44" VerticalAlignment="Top"/>
+        <Button x:Name="btnCancel" Content="Cancel" Margin="286,402,0,0" FontSize="20" Click="btnCancel_Click" RenderTransformOrigin="1.523,0.543" HorizontalAlignment="Left" Width="128" Height="44" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
