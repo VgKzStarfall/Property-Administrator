@@ -3,19 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"        
         xmlns:local="clr-namespace:zPage"
         mc:Ignorable="d"
         Title="DetailProperty" Height="420" Width="400">
     <Grid>
-        <Label Name="lbName" Content="Label" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221"/>
-        <Label Content="Location:" FontSize="20" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbLocation" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,88,0,0" VerticalAlignment="Top"/>
-        <Label Content="Area:" FontSize="20" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbArea" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,161,0,0" VerticalAlignment="Top"/>
-        <Label Content="Price:" FontSize="20" HorizontalAlignment="Left" Margin="10,242,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbPrice" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,242,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbName" Content="Detail" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
+        <materialDesign:PackIcon Kind="MapMarker" Margin="10,98,0,0" Foreground="#FF64DD17"/>
+        <Label Content="Location:" FontSize="20" HorizontalAlignment="Left" Margin="25,88,14,0" VerticalAlignment="Top" FontWeight="Heavy"/>
+        <Label Name="lbLocation" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,88,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
+        <materialDesign:PackIcon Kind="ImageFilterHdr" Margin="10,171,0,0" Foreground="#FFC77800"/>
+        <Label Content="Area:" FontSize="20" HorizontalAlignment="Left" Margin="25,161,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
+        <Label Name="lbArea" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,161,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
+        <materialDesign:PackIcon Kind="CurrencyUsd" Margin="10,252,0,0" Foreground="Yellow"/>
+        <Label Content="Price:" FontSize="20" HorizontalAlignment="Left" Margin="25,242,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
+        <Label Name="lbPrice" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,242,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
         <Button Name="btnUpdate" Content="Update" FontSize="20" HorizontalAlignment="Left" Margin="50,322,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnUpdate_Click"/>
         <Button Name="btnDelete" Content="Delete" FontSize="20" HorizontalAlignment="Left" Margin="236,322,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnDelete_Click"/>
-
     </Grid>
 </Window>
