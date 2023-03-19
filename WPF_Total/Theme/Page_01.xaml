@@ -7,10 +7,5 @@
       mc:Ignorable="d" Height="600" Width="1000"
       Title="Page 01: Welcome to WPF" >
 
-    <Grid Background="White" Margin="0,0,-110,0">
-        <TextBlock TextAlignment="Center"
-                   FontSize="24" FontWeight="Bold" Foreground="Black"
-                   Text="_________________"
-                   Margin="446,547,446,10"/>
-    </Grid>
+    <Grid Background="White" Margin="0,0,-110,0"/>
 </Page>

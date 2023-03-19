@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MultiPage_A"
-        mc:Ignorable="d" Title="Group 5 Application" Height="600" Width="1000">
+        mc:Ignorable="d" Title="Group 5 Application" Height="688" Width="1101">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="Aqua" />
@@ -26,7 +26,7 @@
                 </TransformGroup>
             </Frame.RenderTransform>
         </Frame>
-        <Label x:Name="lb_Main" Content="Property Management" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Width="907" FontSize="22" Margin="40,28,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center">
+        <Label x:Name="lb_Main" Content="Property Management" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Width="1011" FontSize="22" Margin="40,76,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -38,15 +38,15 @@
             </Label.Effect>
         </Label>
         <Button Content="1" Name="btnToPage01" Click="btnToPage01_Click"  
-                HorizontalAlignment="Left" Margin="159,476,0,56" Width="93" FontWeight="Bold" BorderBrush="Black" Background="White"/>
+                HorizontalAlignment="Left" Margin="159,476,0,56" Width="93" FontWeight="Bold" BorderBrush="Black" Background="White" Foreground="#DDF100FF"/>
         <Button Content="2" Name="btnToPage02" Click="btnToPage02_Click"
-                HorizontalAlignment="Left" Margin="257,476,0,56" Width="93" FontWeight="Bold" BorderBrush="Black" Background="Black" Foreground="White"/>
+                HorizontalAlignment="Left" Margin="257,476,0,56" Width="93" FontWeight="Bold" BorderBrush="Black" Background="Black" Foreground="#DDF100FF"/>
 
-        <Button Content="Manager" x:Name="btnOption1" Click="btnOption1_Click"
-            HorizontalAlignment="Left" Margin="40,166,0,371" Width="238" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="Black"/>
+        <Button Content="Manage" x:Name="btnOption1" Click="btnOption1_Click"
+            HorizontalAlignment="Left" Margin="216,286,0,286" Width="174" Height="50" FontWeight="Bold" Visibility="Visible" Background="White" Foreground="#DDF100FF" BorderBrush="White"/>
 
 
-        <Label x:Name="lb_Main_Copy" Content="Theme" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Width="102" FontSize="22" Margin="40,476,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center">
+        <Label x:Name="lb_Main_Copy" Content="Theme" HorizontalAlignment="Left" VerticalAlignment="Top" Height="51" Width="102" FontSize="22" Margin="40,510,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -58,7 +58,7 @@
             </Label.Effect>
         </Label>
 
-        <Label x:Name="lb_Info" Content="Group 5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="132" FontSize="15" Margin="815,498,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center">
+        <Label x:Name="lb_Info" Content="Group 5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="132" FontSize="15" Margin="919,531,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -69,10 +69,10 @@
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Label Content="Member" HorizontalAlignment="Left" Margin="40,135,0,0" VerticalAlignment="Top" Width="55" FontStyle="Italic" Background="White"/>
-        <Label Content="Property" HorizontalAlignment="Left" Margin="374,135,0,0" VerticalAlignment="Top" Width="55" FontStyle="Italic" Background="White"/>
+        <Label Content="Member" HorizontalAlignment="Left" Margin="276,264,0,0" VerticalAlignment="Top" Width="55" FontStyle="Italic" Background="#FFB700FF" Foreground="#DDFFFFFF"/>
+        <Label Content="Property" HorizontalAlignment="Left" Margin="776,264,0,0" VerticalAlignment="Top" Width="54" FontStyle="Italic" Background="#FFB700FF" Foreground="#DDFFFFFF"/>
         <Button Content="View" x:Name="btnOption2"
-            HorizontalAlignment="Left" Margin="374,166,0,371" Width="238" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="Black" Click="btnOption2_Click"/>
+            HorizontalAlignment="Left" Margin="716,286,0,286" Width="174" Height="50" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="White" Click="btnOption2_Click" Foreground="#DDF100FF"/>
 
     </Grid>
 
