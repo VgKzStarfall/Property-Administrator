@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:zPage"
         Title="PropertyWindow" Height="450" Width="800">
     <Grid>
@@ -13,12 +14,12 @@
         <Button Name="btnCreate" Content="Create" HorizontalAlignment="Right" Margin="0,369,662,0" VerticalAlignment="Top" Height="33" Width="97" Click="btnCreate_Click"/>
         <TextBox Name="txtSearch" HorizontalAlignment="Left" Margin="264,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Height="27" Grid.RowSpan="2"/>
         <Button Name="btnSearch" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="96" Margin="588,91,0,0" Click="btnSearch_Click" Grid.RowSpan="2"/>
-        <ComboBox Name="searchType" HorizontalAlignment="Left" Margin="144,91,0,0" VerticalAlignment="Top" Width="120" Height="27" SelectedValuePath="Content" DropDownClosed="searchType_DropDownClosed">
+        <ComboBox Name="searchType" HorizontalAlignment="Left" Margin="144,91,0,0" VerticalAlignment="Top" Width="120" Height="27" SelectedValuePath="Content" DropDownClosed="searchType_DropDownClosed" materialDesign:HintAssist.Hint="Name">
             <ComboBoxItem Content="Name"/>
             <ComboBoxItem Content="Location"/>
             <ComboBoxItem Content="Area"/>
             <ComboBoxItem Content="Price"/>
         </ComboBox>
-
+        
     </Grid>
 </Window>

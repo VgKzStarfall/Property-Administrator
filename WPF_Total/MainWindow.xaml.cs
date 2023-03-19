@@ -43,6 +43,8 @@ namespace MultiPage_A
 
         private void btnOption2_Click(object sender, RoutedEventArgs e)
         {
+            //PropertyWindow win2 = new PropertyWindow(PropertyRepository());
+            //win2.Show();
             var window = new PropertyWindow(new PropertyRepository());
             window.ShowDialog();
         }
