@@ -54,8 +54,8 @@ namespace zPage
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 repos.DeleteProperty(prop.PropertyId);
+                MessageBox.Show("Delete Successfully");
             }
-            MessageBox.Show("Delete Successfully");
             this.Close();
         }
 

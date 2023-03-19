@@ -52,8 +52,8 @@ namespace zPage
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 memberRepository.DeleteMember(mem.MemberId);
+                MessageBox.Show("Delete Successfully");
             }
-            MessageBox.Show("Delete Successfully");
             this.Close();
         }
         private void ReloadData(object sender, System.ComponentModel.CancelEventArgs e)
