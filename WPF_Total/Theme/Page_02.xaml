@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MultiPage_A"
-      mc:Ignorable="d" Height="600" Width="1000"
+      mc:Ignorable="d" Height="688" Width="1101"
       Title="Page 02: Welcome to WPF" >
 
     <Grid Background="Black" Margin="0,0,-110,0"/>
