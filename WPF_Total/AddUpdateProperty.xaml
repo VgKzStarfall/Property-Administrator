@@ -3,19 +3,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"        
         xmlns:local="clr-namespace:zPage"
         mc:Ignorable="d"
         Title="AddUpdateProperty" Height="450" Width="400">
     <Grid>
-        <Label Name="lbTitle" Content="Add A Property" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <TextBox Name="txtName" Margin="138,74,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="28,79,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
-        <TextBox Name="txtLocation" Margin="138,138,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
-        <Label Content="Location" HorizontalAlignment="Left" Margin="28,143,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
-        <TextBox Name="txtArea" Margin="138,206,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
-        <Label Content="Area" HorizontalAlignment="Left" Margin="28,211,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
-        <TextBox Name="txtPrice" Margin="138,271,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
-        <Label Content="Price" HorizontalAlignment="Left" Margin="28,276,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <Label Name="lbTitle" Content="Add A Property" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="SemiBold"/>
+        <TextBox Name="txtName" Margin="130,74,27,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <materialDesign:PackIcon Kind="Account" Margin="28,89,0,0" Foreground="#FFAC18ED"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="43,79,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939" FontWeight="Medium"/>
+        <TextBox Name="txtLocation" Margin="130,138,27,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <materialDesign:PackIcon Kind="MapMarker" Margin="28,153,0,0" Foreground="#FF64DD17"/>
+        <Label Content="Location" HorizontalAlignment="Left" Margin="43,143,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939" FontWeight="Medium"/>
+        <TextBox Name="txtArea" Margin="130,206,27,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <materialDesign:PackIcon Kind="ImageFilterHdr" Margin="28,221,0,0" Foreground="#FFC77800"/>
+        <Label Content="Area" HorizontalAlignment="Left" Margin="43,211,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939" FontWeight="Medium"/>
+        <TextBox Name="txtPrice" Margin="130,271,27,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <materialDesign:PackIcon Kind="CurrencyUsd" Margin="28,286,0,0" Foreground="Yellow"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="43,276,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939" FontWeight="Medium"/>
         <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="53,354,0,0" VerticalAlignment="Top" Height="47" FontSize="20" Width="128" Click="btnSubmit_Click"/>
         <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="233,354,0,0" VerticalAlignment="Top" Height="47" FontSize="20" Width="128" Click="btnCancel_Click"/>
 
