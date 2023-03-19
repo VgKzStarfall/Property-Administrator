@@ -4,16 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessObject;
+using DataAccess.DataAccess;
 
 namespace DataAccess.Repos
 {
     public interface IMember
     {
-        IEnumerable<MemberObject> GetMember();
-        MemberObject GetMemberByID(int carId);
-        void InsertMember(MemberObject member);
+        IEnumerable<Member> GetMember();
+        Member GetMemberByID(int carId);
+        void InsertMember(Member member);
         void DeleteMember(int memberId);
-        void UpdateMember(MemberObject member);
-        MemberObject Login(string email, string password);
+        void UpdateMember(Member member);
+        List<Member> GetListSearchByName(string name);
+        List<Member> GetListSearchByCity(string city);
+        List<Member> GetListSearchByCountry(string country);
+
     }
 }

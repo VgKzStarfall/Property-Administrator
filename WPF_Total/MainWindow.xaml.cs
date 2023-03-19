@@ -37,8 +37,8 @@ namespace MultiPage_A
         }
         private void btnOption1_Click(object sender, RoutedEventArgs e)
         {
-            WindowProduct win1 = new WindowProduct();
-            win1.Show();
+            MemberWindow win1 = new MemberWindow(new MemberRepository());
+            win1.ShowDialog();
         }
 
         private void btnOption2_Click(object sender, RoutedEventArgs e)
