@@ -1,0 +1,23 @@
+﻿<Window x:Class="zPage.AddUpdateProperty"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zPage"
+        mc:Ignorable="d"
+        Title="AddUpdateProperty" Height="450" Width="400">
+    <Grid>
+        <Label Name="lbTitle" Content="Add A Property" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox Name="txtName" Margin="138,74,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="28,79,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <TextBox Name="txtLocation" Margin="138,138,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <Label Content="Location" HorizontalAlignment="Left" Margin="28,143,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <TextBox Name="txtArea" Margin="138,206,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <Label Content="Area" HorizontalAlignment="Left" Margin="28,211,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <TextBox Name="txtPrice" Margin="138,271,7,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="28,276,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="53,354,0,0" VerticalAlignment="Top" Height="47" FontSize="20" Width="128" Click="btnSubmit_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="233,354,0,0" VerticalAlignment="Top" Height="47" FontSize="20" Width="128" Click="btnCancel_Click"/>
+
+    </Grid>
+</Window>

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using zPage;
+using DataAccess.Repos;
 
 namespace MultiPage_A
 {
@@ -41,7 +43,8 @@ namespace MultiPage_A
 
         private void btnOption2_Click(object sender, RoutedEventArgs e)
         {
-
+            var window = new PropertyWindow(new PropertyRepository());
+            window.ShowDialog();
         }
     }
 }
