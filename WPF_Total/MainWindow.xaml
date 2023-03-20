@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MultiPage_A"
-        mc:Ignorable="d" Title="Group 5 Application" Height="688" Width="1101">
+        mc:Ignorable="d" Title="Group 5 Application" Height="688" Width="1101" ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="Aqua" />
