@@ -27,14 +27,6 @@ namespace MultiPage_A
             InitializeComponent();
         }
 
-        private void btnToPage01_Click(object sender, RoutedEventArgs e)
-        {
-            frMain.Content = new Page_01();
-        }
-        private void btnToPage02_Click(object sender, RoutedEventArgs e)
-        {
-            frMain.Content = new Page_02();
-        }
         private void btnOption1_Click(object sender, RoutedEventArgs e)
         {
             MemberWindow win1 = new MemberWindow(new MemberRepository());
@@ -43,8 +35,6 @@ namespace MultiPage_A
 
         private void btnOption2_Click(object sender, RoutedEventArgs e)
         {
-            //PropertyWindow win2 = new PropertyWindow(PropertyRepository());
-            //win2.Show();
             var window = new PropertyWindow(new PropertyRepository());
             window.ShowDialog();
         }

@@ -4,32 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MultiPage_A"
-        mc:Ignorable="d" Title="Group 5 Application" Height="688" Width="1101" ResizeMode="NoResize">
+        mc:Ignorable="d" Title="Admin Tools" Height="500" Width="500" ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="Aqua" />
             <Setter Property="FontSize" Value="24" />
         </Style>
     </Window.Resources>
-
-
-    <Grid>
+    <Grid x:Name="grid_Main" HorizontalAlignment="Center" Height="480" Margin="0,10,0,0" VerticalAlignment="Top" Width="500">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="55*"/>
-            <ColumnDefinition Width="496*"/>
+            <ColumnDefinition Width="153*"/>
+            <ColumnDefinition Width="347*"/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="main_background" HorizontalAlignment="Left" Height="435" Margin="406,0,0,0" VerticalAlignment="Center" Width="585" Stretch="Fill" Source="/1243.png" Grid.Column="1"/>
-        <Frame x:Name="frMain" NavigationUIVisibility="Visible" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
-            <Frame.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="0"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="0"/>
-                </TransformGroup>
-            </Frame.RenderTransform>
-        </Frame>
-        <Label x:Name="lb_Main" Content="Property Admin Tool for Government" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Width="498" FontSize="22" Margin="40,67,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center" Grid.ColumnSpan="2">
+        <Image x:Name="bg_gov" HorizontalAlignment="Left" Height="330" VerticalAlignment="Center" Width="444" Source="/gv.jpg" Stretch="Fill" Opacity="0.5" Grid.ColumnSpan="2" Margin="28,0,0,0"/>
+        <Label x:Name="lb_Main" Content="Property Administrator - Government" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Width="444" FontSize="22" Margin="28,23,0,0" FontStyle="Normal" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center" Grid.ColumnSpan="2">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -42,12 +31,20 @@
         </Label>
 
         <Button Content="Landlord Management" x:Name="btnOption1" Click="btnOption1_Click"
-            HorizontalAlignment="Left" Margin="71,235,0,387" Width="216" Height="50" FontWeight="Bold" Visibility="Visible" Background="White" Foreground="#DDF100FF" BorderBrush="White" Grid.Column="1"/>
+            HorizontalAlignment="Left" Margin="142,138,0,310" Width="216" FontWeight="Bold" Visibility="Visible" Background="White" Foreground="#DDF100FF" BorderBrush="White" Grid.ColumnSpan="2"/>
         <Button Content="Property Management" x:Name="btnOption2"
-            HorizontalAlignment="Left" Margin="71,340,0,282" Width="216" Height="50" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="White" Click="btnOption2_Click" Foreground="#DDF100FF" Grid.Column="1"/>
+            HorizontalAlignment="Left" Margin="142,224,0,224" Width="216" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="White" Click="btnOption2_Click" Foreground="#DDF100FF" Grid.ColumnSpan="2"/>
         <Button Content="Property Revaluation" x:Name="btnOption3"
-            HorizontalAlignment="Left" Margin="71,445,0,177" Width="216" Height="50" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="White" Foreground="#DDF100FF" Grid.Column="1" Click="btnOption3_Click"/>
+            HorizontalAlignment="Left" Margin="142,315,0,133" Width="216" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="White" Foreground="#DDF100FF" Click="btnOption3_Click" Grid.ColumnSpan="2"/>
 
+        <Label x:Name="lb_Secondary" Content="Actions made here are crucial." HorizontalAlignment="Left" VerticalAlignment="Top" Height="19" Width="444" FontSize="9" Margin="28,434,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Normal" Foreground="White" VerticalContentAlignment="Center" Grid.ColumnSpan="2">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Purple" Offset="0.643"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
     </Grid>
 
 </Window>
