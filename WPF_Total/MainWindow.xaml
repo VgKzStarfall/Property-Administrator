@@ -15,7 +15,10 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="496*"/>
         </Grid.ColumnDefinitions>
+        <Image x:Name="main_background" HorizontalAlignment="Left" Height="435" Margin="406,0,0,0" VerticalAlignment="Center" Width="585" Stretch="Fill" Source="/1243.png" Grid.Column="1"/>
         <Frame x:Name="frMain" NavigationUIVisibility="Visible" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <Frame.RenderTransform>
                 <TransformGroup>
@@ -26,27 +29,7 @@
                 </TransformGroup>
             </Frame.RenderTransform>
         </Frame>
-        <Label x:Name="lb_Main" Content="Property Management" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Width="1011" FontSize="22" Margin="40,76,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center">
-            <Label.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="Purple" Offset="0.643"/>
-                </LinearGradientBrush>
-            </Label.Background>
-            <Label.Effect>
-                <DropShadowEffect/>
-            </Label.Effect>
-        </Label>
-        <Button Content="1" Name="btnToPage01" Click="btnToPage01_Click"  
-                HorizontalAlignment="Left" Margin="159,476,0,56" Width="93" FontWeight="Bold" BorderBrush="Black" Background="White" Foreground="#DDF100FF"/>
-        <Button Content="2" Name="btnToPage02" Click="btnToPage02_Click"
-                HorizontalAlignment="Left" Margin="257,476,0,56" Width="93" FontWeight="Bold" BorderBrush="Black" Background="Black" Foreground="#DDF100FF"/>
-
-        <Button Content="Manage" x:Name="btnOption1" Click="btnOption1_Click"
-            HorizontalAlignment="Left" Margin="216,286,0,286" Width="174" Height="50" FontWeight="Bold" Visibility="Visible" Background="White" Foreground="#DDF100FF" BorderBrush="White"/>
-
-
-        <Label x:Name="lb_Main_Copy" Content="Theme" HorizontalAlignment="Left" VerticalAlignment="Top" Height="51" Width="102" FontSize="22" Margin="40,510,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center">
+        <Label x:Name="lb_Main" Content="Property Admin Tool for Government" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Width="498" FontSize="22" Margin="40,67,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center" Grid.ColumnSpan="2">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -58,21 +41,12 @@
             </Label.Effect>
         </Label>
 
-        <Label x:Name="lb_Info" Content="Group 5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="132" FontSize="15" Margin="919,531,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White" VerticalContentAlignment="Center">
-            <Label.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="Purple" Offset="0.643"/>
-                </LinearGradientBrush>
-            </Label.Background>
-            <Label.Effect>
-                <DropShadowEffect/>
-            </Label.Effect>
-        </Label>
-        <Label Content="Member" HorizontalAlignment="Left" Margin="276,264,0,0" VerticalAlignment="Top" Width="55" FontStyle="Italic" Background="#FFB700FF" Foreground="#DDFFFFFF"/>
-        <Label Content="Property" HorizontalAlignment="Left" Margin="776,264,0,0" VerticalAlignment="Top" Width="54" FontStyle="Italic" Background="#FFB700FF" Foreground="#DDFFFFFF"/>
-        <Button Content="View" x:Name="btnOption2"
-            HorizontalAlignment="Left" Margin="716,286,0,286" Width="174" Height="50" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="White" Click="btnOption2_Click" Foreground="#DDF100FF"/>
+        <Button Content="Landlord Management" x:Name="btnOption1" Click="btnOption1_Click"
+            HorizontalAlignment="Left" Margin="71,235,0,387" Width="216" Height="50" FontWeight="Bold" Visibility="Visible" Background="White" Foreground="#DDF100FF" BorderBrush="White" Grid.Column="1"/>
+        <Button Content="Property Management" x:Name="btnOption2"
+            HorizontalAlignment="Left" Margin="71,340,0,282" Width="216" Height="50" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="White" Click="btnOption2_Click" Foreground="#DDF100FF" Grid.Column="1"/>
+        <Button Content="Property Revaluation" x:Name="btnOption3"
+            HorizontalAlignment="Left" Margin="71,445,0,177" Width="216" Height="50" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="White" Foreground="#DDF100FF" Grid.Column="1" Click="btnOption3_Click"/>
 
     </Grid>
 

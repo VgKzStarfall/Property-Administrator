@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# WPF TOTAL
+XstoreContext.cs
+appsettings.json
+BaseDal.cs
