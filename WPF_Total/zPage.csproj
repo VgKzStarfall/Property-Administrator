@@ -20,17 +20,10 @@
     <Compile Update="Theme\Page_02.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="OldSample\WindowProduct.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <Page Update="Theme\Page_02.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="OldSample\WindowProduct.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>

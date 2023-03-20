@@ -22,7 +22,7 @@ namespace DataAccess
         }
 
         public string GetConnectionString()
-        {                             
+        {
             string connectionString = "Data Source=DESKTOP-PB8AOLR\\VANKA;Initial Catalog=XStore;Persist Security Info=True;User ID=sa;Password=vanka;Encrypt=False";
 
 
