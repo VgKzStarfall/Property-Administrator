@@ -17,7 +17,8 @@ namespace DataAccess.Repos
         public List<Property> GetListSearchByArea(double area) => PropertyDAO.Instance.GetListSearchByArea(area);
         public List<Property> GetListSearchByLocation(string loc) => PropertyDAO.Instance.GetListSearchByLocation(loc);
         public List<Property> GetListSearchByName(string name) => PropertyDAO.Instance.GetListSearchByName(name);
-        public List<Property> GetListSearchByPrice(double price) => PropertyDAO.Instance.GetListSearchByPrice(price);
+        public List<Property> GetListSearchByPrice(decimal price) => PropertyDAO.Instance.GetListSearchByPrice(price);
+        public void addOwner(Landlord owner, Property prop) => PropertyOwnerDAO.Instance.addOwner(owner, prop);
 
     }
 }
