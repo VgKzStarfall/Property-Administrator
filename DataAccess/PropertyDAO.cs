@@ -29,7 +29,7 @@ namespace DataAccess
             List<Property> properties;
             try
             {
-                var db = new XstoreContext();
+                var db = new PropMngContext();
                 properties = db.Properties.ToList();
             }
             catch (Exception ex)
@@ -44,7 +44,7 @@ namespace DataAccess
         {
             try
             {
-                var db = new XstoreContext();
+                var db = new PropMngContext();
 
                 return db.Properties.First(m => m.PropertyId == id);
 
@@ -60,8 +60,8 @@ namespace DataAccess
             List<Property> properties;
             try
             {
-                var db = new XstoreContext();
-                properties = db.Properties.Where(property => property.PName.Contains(name)).ToList();
+                var db = new PropMngContext();
+                properties = db.Properties.Where(property => property.Name.Contains(name)).ToList();
             }
             catch (Exception ex)
             {
@@ -75,8 +75,8 @@ namespace DataAccess
             List<Property> properties;
             try
             {
-                var db = new XstoreContext();
-                properties = db.Properties.Where(property => property.PLocation.Contains(loc)).ToList();
+                var db = new PropMngContext();
+                properties = db.Properties.Where(property => property.Location.Contains(loc)).ToList();
             }
             catch (Exception ex)
             {
@@ -90,8 +90,8 @@ namespace DataAccess
             List<Property> properties;
             try
             {
-                var db = new XstoreContext();
-                properties = db.Properties.Where(property => property.PArea>=area).ToList();
+                var db = new PropMngContext();
+                properties = db.Properties.Where(property => property.Area>=area).ToList();
             }
             catch (Exception ex)
             {
@@ -100,13 +100,13 @@ namespace DataAccess
             return properties;
         }
 
-        public List<Property> GetListSearchByPrice(double price)
+        public List<Property> GetListSearchByPrice(decimal price)
         {
             List<Property> properties;
             try
             {
-                var db = new XstoreContext();
-                properties = db.Properties.Where(property => property.PPrice >= price).ToList();
+                var db = new PropMngContext();
+                properties = db.Properties.Where(property => property.Price >= price).ToList();
             }
             catch (Exception ex)
             {
@@ -119,7 +119,7 @@ namespace DataAccess
         {
             try
             {
-                var db = new XstoreContext();
+                var db = new PropMngContext();
                 Property prop = new() { PropertyId = Id };
                 db.Properties.Remove(prop);
                 db.SaveChanges();
@@ -135,7 +135,7 @@ namespace DataAccess
         {
             try
             {
-                var db = new XstoreContext();
+                var db = new PropMngContext();
 
                 db.Properties.Add(prop);
                 db.SaveChanges();
@@ -150,7 +150,7 @@ namespace DataAccess
         {
             try
             {
-                var db = new XstoreContext();
+                var db = new PropMngContext();
 
                 db.Properties.Update(prop);
                 db.SaveChanges();
@@ -160,5 +160,7 @@ namespace DataAccess
                 throw new Exception(ex.Message);
             }
         }
+
+        
     }
 }
