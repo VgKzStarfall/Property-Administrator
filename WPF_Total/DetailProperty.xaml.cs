@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DataAccess.DataAccess;
 using DataAccess.Repos;
+using DataAccess.ModelShow;
 
 namespace zPage
 {
@@ -22,6 +23,7 @@ namespace zPage
     public partial class DetailProperty : Window
     {
         Property prop;
+        string newestLL = "";
         PropertyRepository repos = new PropertyRepository();
         public DetailProperty(Property p)
         {
@@ -34,10 +36,17 @@ namespace zPage
         {
             if (prop!=null)
             {
-               /* lbName.Content = prop.PName;
-                lbLocation.Content = prop.PLocation;
-                lbArea.Content = prop.PArea.ToString();
-                lbPrice.Content = prop.PArea.ToString();*/
+                lbName.Content = prop.Name;
+                lbLocation.Content = prop.Location;
+                lbArea.Content = prop.Area.ToString();
+                lbPrice.Content = prop.Price.ToString();
+                lbContact.Content = prop.Contact;
+                cbAvai.IsChecked = ("Y" == prop.Available ? true : false);
+                lbFeature.Content = ("" == repos.getFeatures(prop.PropertyId) ? "No features shown yet" : repos.getFeatures(prop.PropertyId));
+                List<PropertyOwnerShow> listProp = repos.getOwnerHist(prop);
+                listProp.Sort((x, y) => -DateTime.Compare(x.OwnStartDate, y.OwnStartDate));
+                dgHist.ItemsSource = listProp;
+                newestLL = listProp[0].LandlordName;
             }
         }
 
@@ -63,6 +72,13 @@ namespace zPage
         {
             prop = repos.GetPropertyByID(prop.PropertyId);
             LoadData();
+        }
+
+        private void btnChangeOwner_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new OwnerChangeWindow(prop, newestLL);
+            window.Closing += ReloadData;
+            window.ShowDialog();
         }
     }
 }

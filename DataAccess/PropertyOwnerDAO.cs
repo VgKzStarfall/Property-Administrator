@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess.DataAccess;
+using DataAccess.ModelShow;
 
 namespace DataAccess
 {
@@ -25,24 +26,15 @@ namespace DataAccess
         }
         public void addOwner(Landlord owner, Property prop)
         {
-            try
+            var db = new PropMngContext();
+            PropertyOwner po = db.PropertyOwners.FirstOrDefault(m => m.PropertyId == prop.PropertyId && m.OwnEndDate == null);
+            if (po == null)
             {
-                var db = new PropMngContext();
-                PropertyOwner po = db.PropertyOwners.First(m => m.PropertyId == prop.PropertyId && m.OwnEndDate == null);
-                if (po == null)
-                {
-                    newOwner(owner, prop);
-                } else
-                {
-                    endOwner(owner, prop);
-                    newOwner(owner, prop);
-                }
-                db.PropertyOwners.Update(po);
-                db.SaveChanges();
-            }
-            catch (Exception ex)
+                newOwner(owner, prop);
+            } else
             {
-                throw new Exception(ex.Message);
+                endOwner(owner, prop);
+                newOwner(owner, prop);
             }
         }
         public void newOwner(Landlord owner, Property prop)
@@ -51,7 +43,7 @@ namespace DataAccess
             {
                 var db = new PropMngContext();
                 PropertyOwner po = new PropertyOwner();
-                po.OwnId = owner.LandlordId;
+                po.LandlordId = owner.LandlordId;
                 po.PropertyId = prop.PropertyId;
                 po.OwnStartDate = DateTime.Now;
                 db.PropertyOwners.Add(po);
@@ -82,6 +74,32 @@ namespace DataAccess
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public List<PropertyOwnerShow> getListOwnersHistory(Property prop)
+        {
+            List<PropertyOwner> properties;
+            List<PropertyOwnerShow> propShow = new List<PropertyOwnerShow>();
+            try
+            {
+                var db = new PropMngContext();
+                properties = db.PropertyOwners.Where(property => property.PropertyId==prop.PropertyId).ToList();
+                for (int i=0;i< properties.Count;i++)
+                {
+                    PropertyOwnerShow pos = new PropertyOwnerShow();
+                    pos.OwnId = properties[i].OwnId;
+                    pos.LandlordName = db.Landlords.First(l => l.LandlordId == properties[i].LandlordId).Name;
+                    pos.OwnStartDate = (DateTime)properties[i].OwnStartDate;
+                    pos.OwnEndDate = properties[i].OwnEndDate;
+                    propShow.Add(pos);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return propShow;
         }
     }
 }
