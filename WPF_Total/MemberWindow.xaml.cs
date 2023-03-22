@@ -21,19 +21,19 @@ namespace zPage
     /// </summary>
     public partial class MemberWindow : Window
     {
-        MemberRepository memberRepo;
+        LandlordRepository landlordRepo;
         string searchMem;
-        public MemberWindow(MemberRepository memberRepository)
+        public MemberWindow(LandlordRepository landlordRepository)
         {
             InitializeComponent();
-            memberRepo = memberRepository;
+            landlordRepo = landlordRepository;
             LoadData();
-            searchType.SelectedValue = "CompanyName";
-            searchMem = "CompanyName";
+            searchType.SelectedValue = "Name";
+            searchMem = "Name";
         }
         public void LoadData()
         {
-            dg.ItemsSource = memberRepo.GetMember();
+            dg.ItemsSource = landlordRepo.GetLandlord();
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
@@ -49,35 +49,35 @@ namespace zPage
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            Member? item = dg.SelectedItem as Member;
+            Landlord? item = dg.SelectedItem as Landlord;
             if (item != null)
             {
-                var window = new AddUpdateMember(true, item.MemberId);
+                var window = new AddUpdateMember(true, item.LandlordId);
                 window.Closing += AddUpdateWindow_Closing;
                 window.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Please Choose A Member To Update");
+                MessageBox.Show("Please Choose A Landlord To Update");
             }
             LoadData();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            Member? item = dg.SelectedItem as Member;
+            Landlord? item = dg.SelectedItem as Landlord;
             if (item != null)
             {
-                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Do you want to delete this member?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Do you want to delete this landlord?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
                 if (messageBoxResult == MessageBoxResult.Yes)
                 {
-                    memberRepo.DeleteMember(item.MemberId);
+                    landlordRepo.DeleteLandlord(item.LandlordId);
                     MessageBox.Show("Delete Successfully");
                 }
             }
             else
             {
-                MessageBox.Show("Please Choose A Member To Delete");
+                MessageBox.Show("Please Choose A Landlord To Delete");
             }
             LoadData();
         }
@@ -86,14 +86,14 @@ namespace zPage
         {
             if (dg.SelectedItem == null)
             {
-                MessageBox.Show("Please Choose A Member To View Details");
+                MessageBox.Show("Please Choose A Landlord To View Details");
             }
             else
             {
-                Member? p = dg.SelectedItem as Member;
-                if (p.MemberId != 0)
+                Landlord? p = dg.SelectedItem as Landlord;
+                if (p.LandlordId != 0)
                 {
-                    Member mem = memberRepo.GetMemberByID(p.MemberId);
+                    Landlord mem = landlordRepo.GetLandlordByID(p.LandlordId);
                     var window = new DetailMember(mem);
                     window.Closing += AddUpdateWindow_Closing;
                     window.ShowDialog();
@@ -107,17 +107,13 @@ namespace zPage
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-            if("CompanyName".Equals(searchMem))
+            if("Name".Equals(searchMem))
             {
-                dg.ItemsSource = memberRepo.GetListSearchByName(txtSearch.Text);
+                dg.ItemsSource = landlordRepo.GetListSearchByName(txtSearch.Text);
             } else if ("City".Equals(searchMem))
             {
-                dg.ItemsSource = memberRepo.GetListSearchByCity(txtSearch.Text);
-            }
-            else if ("Country".Equals(searchMem))
-            {
-                dg.ItemsSource = memberRepo.GetListSearchByCountry(txtSearch.Text);
-            }
+                dg.ItemsSource = landlordRepo.GetListSearchByCity(txtSearch.Text);
+            }        
         }
     }
 }
