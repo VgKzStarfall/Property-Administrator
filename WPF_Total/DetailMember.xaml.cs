@@ -21,44 +21,44 @@ namespace zPage
     /// </summary>
     public partial class DetailMember : Window
     {
-        Member mem;
-        MemberRepository memberRepository = new MemberRepository();
-        public DetailMember(Member member)
+        Landlord landlord;
+        LandlordRepository landlordRepository = new LandlordRepository();
+        public DetailMember(Landlord land)
         {
             InitializeComponent();
-            mem = member;
+            landlord = land;
             LoadData();
         }
         private void LoadData()
         {
-            if (mem != null)
+            if (landlord != null)
             {
-                lbName.Content = mem.CompanyName;
-                lbCity.Content = mem.City;
-                lbCountry.Content = mem.Country;
-                lbEmail.Content = mem.Email;
+                /*lbName.Content = landlord.Name
+                lbCity.Content = landlord.City;
+                lbCountry.Content = landlord.Country;
+                lbEmail.Content = landlord.Email;*/
             }
         }
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            var window = new AddUpdateMember(true, mem.MemberId);
+            var window = new AddUpdateMember(true, landlord.LandlordId);
             window.Closing += ReloadData;
             window.ShowDialog();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Do you want to delete this member?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Do you want to delete this landlord?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
-                memberRepository.DeleteMember(mem.MemberId);
+                landlordRepository.DeleteLandlord(landlord.LandlordId);
                 MessageBox.Show("Delete Successfully");
             }
             this.Close();
         }
         private void ReloadData(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            mem = memberRepository.GetMemberByID(mem.MemberId);
+            landlord = landlordRepository.GetLandlordByID(landlord.LandlordId);
             LoadData();
         }
     }

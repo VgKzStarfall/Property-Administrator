@@ -29,7 +29,7 @@ namespace MultiPage_A
 
         private void btnOption1_Click(object sender, RoutedEventArgs e)
         {
-            MemberWindow win1 = new MemberWindow(new MemberRepository());
+            MemberWindow win1 = new MemberWindow(new LandlordRepository());
             win1.ShowDialog();
         }
 
