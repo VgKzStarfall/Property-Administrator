@@ -34,10 +34,10 @@ namespace zPage
         {
             if (prop!=null)
             {
-                lbName.Content = prop.PName;
+               /* lbName.Content = prop.PName;
                 lbLocation.Content = prop.PLocation;
                 lbArea.Content = prop.PArea.ToString();
-                lbPrice.Content = prop.PArea.ToString();
+                lbPrice.Content = prop.PArea.ToString();*/
             }
         }
 

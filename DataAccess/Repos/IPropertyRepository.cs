@@ -18,6 +18,6 @@ namespace DataAccess.Repos
         List<Property> GetListSearchByLocation(string loc);
         List<Property> GetListSearchByArea(double area);
         List<Property> GetListSearchByPrice(decimal price);
-        void addOwner(Landlord owner, Property prop)
+        void addOwner(Landlord owner, Property prop);
     }
 }
