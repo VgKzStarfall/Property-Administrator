@@ -366,3 +366,4 @@ FodyWeavers.xsd
 XstoreContext.cs
 appsettings.json
 BaseDal.cs
+/DataAccess/Repos/appsettings.json
