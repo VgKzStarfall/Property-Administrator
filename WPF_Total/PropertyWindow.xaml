@@ -8,7 +8,16 @@
         Title="PropertyWindow" Height="450" Width="800">
     <Grid>
         <TextBlock Text="Property Management" TextAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="71" Width="800" FontSize="50"/>
-        <DataGrid Name="dg" Margin="0,151,0,0" Height="218" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800" ColumnWidth="*" MouseDoubleClick="dg_MouseDoubleClick"/>
+        <DataGrid Name="dg" AutoGenerateColumns="False" Margin="0,151,0,0" Height="218" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800" ColumnWidth="*" MouseDoubleClick="dg_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Location" Binding="{Binding Location}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Area" Binding="{Binding Area}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Contact" Binding="{Binding Contact}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Available" Binding="{Binding Available}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
         <Button Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="676,369,0,0" VerticalAlignment="Top" Height="33" Width="97" Click="btnDelete_Click"/>
         <Button Name="btnUpdate" Content="Update" HorizontalAlignment="Center" VerticalAlignment="Top" Height="33" Width="96" Margin="0,369,0,0" Click="btnUpdate_Click"/>
         <Button Name="btnCreate" Content="Create" HorizontalAlignment="Right" Margin="0,369,662,0" VerticalAlignment="Top" Height="33" Width="97" Click="btnCreate_Click"/>

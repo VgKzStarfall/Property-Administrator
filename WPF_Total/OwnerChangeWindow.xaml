@@ -1,0 +1,16 @@
+﻿<Window x:Class="zPage.OwnerChangeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zPage"
+        mc:Ignorable="d"
+        Title="OwnerChangeWindow" Height="400" Width="400">
+    <Grid>
+        <Label Content="Changing Owner For Name" FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.344,-1.903"/>
+        <ComboBox Name="cbLandlord" HorizontalAlignment="Left" Margin="200,167,0,0" VerticalAlignment="Top" Width="120" DropDownClosed="cbLandlord_DropDownClosed"/>
+        <Label Content="Landlord" FontSize="20" FontWeight="Medium" HorizontalAlignment="Left" Margin="61,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.344,-1.903"/>
+        <Button Name="btnConfirm" Content="Confirm" HorizontalAlignment="Left" Margin="98,318,0,0" VerticalAlignment="Top" Click="btnConfirm_Click"/>
+        <Button Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="222,318,0,0" VerticalAlignment="Top" Click="btnCancel_Click"/>
+    </Grid>
+</Window>

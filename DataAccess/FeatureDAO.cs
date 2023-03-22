@@ -24,6 +24,34 @@ namespace DataAccess
             }
         }
 
+        public List<Feature> GetListByPropId(int propId)
+        {
+            List<Feature> features;
+            try
+            {
+                var db = new PropMngContext();
+                features = db.Features.Where(f => f.PropertyId == propId).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
 
+            return features;
+        }
+
+        public string listFeatureToString(List<Feature> listF)
+        {
+            string features = "";
+            foreach (var f in listF)
+            {
+                features +=f.FeatureDescription + ", ";
+            }
+            if (features.Length>2)
+            {
+                features = features.Substring(0, features.Length - 2);
+            }
+            return features;
+        }
     }
 }

@@ -6,16 +6,31 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"        
         xmlns:local="clr-namespace:zPage"
         mc:Ignorable="d"
-        Title="DetailProperty" Height="420" Width="1200">
+        Title="DetailProperty" Height="500" Width="1200">
     <Grid>
         <Label Name="lbName" Content="Detail" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
         <Label Content="Location:" FontSize="20" HorizontalAlignment="Left" Margin="25,88,14,0" VerticalAlignment="Top" FontWeight="Heavy"/>
-        <Label Name="lbLocation" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,88,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
-        <Label Content="Area:" FontSize="20" HorizontalAlignment="Left" Margin="25,161,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
-        <Label Name="lbArea" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,161,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
-        <Label Content="Price:" FontSize="20" HorizontalAlignment="Left" Margin="25,242,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
-        <Label Name="lbPrice" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,242,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
-        <Button Name="btnUpdate" Content="Update" FontSize="20" HorizontalAlignment="Left" Margin="50,322,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnUpdate_Click"/>
-        <Button Name="btnDelete" Content="Delete" FontSize="20" HorizontalAlignment="Left" Margin="236,322,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnDelete_Click"/>
+        <Label Name="lbLocation" Content="Label" IsEnabled="False" FontSize="20" HorizontalAlignment="Left" Margin="143,88,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
+        <Label Content="Area:" FontSize="20" HorizontalAlignment="Left" Margin="25,151,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
+        <Label Name="lbArea" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,151,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
+        <Label Content="Price:" FontSize="20" HorizontalAlignment="Left" Margin="25,216,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
+        <Label Name="lbPrice" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,216,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
+        <Button Name="btnUpdate" Content="Update" FontSize="20" HorizontalAlignment="Left" Margin="39,412,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnUpdate_Click"/>
+        <Button Name="btnDelete" Content="Delete" FontSize="20" HorizontalAlignment="Left" Margin="253,412,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnDelete_Click"/>
+        <Label Content="Contact:" FontSize="20" HorizontalAlignment="Left" Margin="25,282,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
+        <Label x:Name="lbContact" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,282,0,0" VerticalAlignment="Top" FontWeight="Medium" RenderTransformOrigin="0.52,0.024"/>
+        <CheckBox Name="cbAvai" IsEnabled="False"  Content="Available" HorizontalAlignment="Left" Margin="25,348,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Medium" Width="192"/>
+        <Label Content="Features" FontSize="30" HorizontalAlignment="Left" Margin="484,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
+        <Label Content="Owners History" FontSize="30" HorizontalAlignment="Left" Margin="484,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
+        <DataGrid Name="dgHist" Margin="465,247,0,77" ColumnWidth="*" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Owner" Binding="{Binding LandlordName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="From" Binding="{Binding OwnStartDate}"></DataGridTextColumn>
+                <DataGridTextColumn Header="To" Binding="{Binding OwnEndDate}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnChangeOwner" Content="Change Owner" FontSize="20" HorizontalAlignment="Left" Margin="712,412,0,0" VerticalAlignment="Top" Height="43" Width="190" Click="btnChangeOwner_Click"/>
+        <Label x:Name="lbFeature" Content="Label" IsEnabled="False" FontSize="20" HorizontalAlignment="Left" Margin="484,80,0,0" VerticalAlignment="Top" FontWeight="Medium" Height="114" Width="687"/>
+
     </Grid>
 </Window>

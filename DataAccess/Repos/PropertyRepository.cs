@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.ModelShow;
 
 namespace DataAccess.Repos
 {
@@ -19,6 +20,7 @@ namespace DataAccess.Repos
         public List<Property> GetListSearchByName(string name) => PropertyDAO.Instance.GetListSearchByName(name);
         public List<Property> GetListSearchByPrice(decimal price) => PropertyDAO.Instance.GetListSearchByPrice(price);
         public void addOwner(Landlord owner, Property prop) => PropertyOwnerDAO.Instance.addOwner(owner, prop);
-
+        public List<PropertyOwnerShow> getOwnerHist(Property prop) => PropertyOwnerDAO.Instance.getListOwnersHistory(prop);
+        public string getFeatures(int propId) => FeatureDAO.Instance.listFeatureToString(FeatureDAO.Instance.GetListByPropId(propId));
     }
 }

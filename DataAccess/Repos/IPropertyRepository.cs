@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess.DataAccess;
+using DataAccess.ModelShow;
 
 namespace DataAccess.Repos
 {
@@ -19,5 +20,7 @@ namespace DataAccess.Repos
         List<Property> GetListSearchByArea(double area);
         List<Property> GetListSearchByPrice(decimal price);
         void addOwner(Landlord owner, Property prop);
+        List<PropertyOwnerShow> getOwnerHist(Property prop);
+        string getFeatures(int propId);
     }
 }
