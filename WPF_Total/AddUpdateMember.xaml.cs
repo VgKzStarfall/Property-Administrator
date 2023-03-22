@@ -24,7 +24,7 @@ namespace zPage
     {
         bool isEdit;
         int id;
-        MemberRepository memberRepository = new MemberRepository();
+        LandlordRepository landlordRepository = new LandlordRepository();
         public AddUpdateMember(bool isEditOrAdd, int idChange)
         {
             InitializeComponent();
@@ -32,20 +32,20 @@ namespace zPage
             id = idChange;
             if (isEdit)
             {
-                lbTitle.Content = "Update A Member";
-                Member p = memberRepository.GetMemberByID(idChange);
+                lbTitle.Content = "Update A LandLord";
+                Landlord p = landlordRepository.GetLandlordByID(idChange);
                 if (p != null)
                 {
-                    txtName.Text = p.CompanyName;
+                    /*txtName.Text = p.CompanyName;
                     txtCity.Text = p.City;
                     txtCountry.Text = p.Country;
                     txtPassword.Text = p.Password;
-                    txtEmail.Text = p.Email;
+                    txtEmail.Text = p.Email;*/
                 }
             }
             else
             {
-                lbTitle.Content = "Add A Member";
+                lbTitle.Content = "Add A LandLord";
             }
         }
 
@@ -81,21 +81,21 @@ namespace zPage
             }
             if (check)
             {
-                Member p = new Member();
-                p.CompanyName = txtName.Text;
+                Landlord p = new Landlord();
+               /* p.CompanyName = txtName.Text;
                 p.City = txtCity.Text;
                 p.Country = txtCountry.Text;
                 p.Password = txtPassword.Text;
-                p.Email = txtEmail.Text;
+                p.Email = txtEmail.Text;*/
                 if (isEdit)
                 {
-                    p.MemberId = id;
-                    memberRepository.UpdateMember(p);
+                    p.LandlordId = id;
+                    landlordRepository.UpdateLandlord(p);
                     MessageBox.Show("Update Successfully");
                 }
                 else
                 {
-                    memberRepository.InsertMember(p);
+                    landlordRepository.InsertLandlord(p);
                     MessageBox.Show("Insert successfully");
                 }
                 this.Close();

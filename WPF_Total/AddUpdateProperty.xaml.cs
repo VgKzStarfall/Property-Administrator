@@ -35,10 +35,10 @@ namespace zPage
                 Property p = repository.GetPropertyByID(id);
                 if (p != null)
                 {
-                    txtName.Text = p.PName;
+                    /*txtName.Text = p.PName;
                     txtLocation.Text = p.PLocation;
                     txtArea.Text = (p.PArea).ToString();
-                    txtPrice.Text = (p.PPrice).ToString();
+                    txtPrice.Text = (p.PPrice).ToString();*/
                 }
             }
             else
@@ -87,10 +87,10 @@ namespace zPage
             if (check)
             {
                 Property p = new Property();
-                p.PName = txtName.Text;
+               /* p.PName = txtName.Text;
                 p.PLocation = txtLocation.Text;
                 p.PArea = double.Parse(txtArea.Text);
-                p.PPrice = int.Parse(txtPrice.Text);
+                p.PPrice = int.Parse(txtPrice.Text);*/
                 if (isEdit)
                 {
                     p.PropertyId = id;
