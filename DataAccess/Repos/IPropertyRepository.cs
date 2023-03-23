@@ -24,5 +24,8 @@ namespace DataAccess.Repos
         string getFeatures(int propId);
         void endOwner(Property prop);
         List<Feature> listFeatures(Property prop);
+        void addFeatures(Feature[] features);
+        void updateFeature(Feature f);
+        void deleteFeature(int featureId);
     }
 }

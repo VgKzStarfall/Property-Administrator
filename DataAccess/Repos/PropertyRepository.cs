@@ -24,5 +24,8 @@ namespace DataAccess.Repos
         public string getFeatures(int propId) => FeatureDAO.Instance.listFeatureToString(FeatureDAO.Instance.GetListByPropId(propId));
         public void endOwner(Property prop) => PropertyOwnerDAO.Instance.endOwner(prop);
         public List<Feature> listFeatures(Property prop) => FeatureDAO.Instance.GetListByPropId(prop.PropertyId);
+        public void addFeatures(Feature[] features) => FeatureDAO.Instance.Add(features);
+        public void updateFeature(Feature f) => FeatureDAO.Instance.Update(f);
+        public void deleteFeature(int featureId) => FeatureDAO.Instance.DeleteById(featureId);
     }
 }

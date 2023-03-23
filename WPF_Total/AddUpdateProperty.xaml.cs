@@ -35,10 +35,12 @@ namespace zPage
                 Property p = repository.GetPropertyByID(id);
                 if (p != null)
                 {
-                    /*txtName.Text = p.PName;
-                    txtLocation.Text = p.PLocation;
-                    txtArea.Text = (p.PArea).ToString();
-                    txtPrice.Text = (p.PPrice).ToString();*/
+                    txtName.Text = p.Name;
+                    txtLocation.Text = p.Location;
+                    txtArea.Text = (p.Area).ToString();
+                    txtPrice.Text = (p.Price).ToString();
+                    txtContact.Text = p.Contact;
+                    cbAvai.IsChecked = ("Y" == p.Available ? true : false);
                 }
             }
             else
@@ -66,6 +68,10 @@ namespace zPage
             {
                 MessageBox.Show("Please Input Property's Price");
                 check = false;
+            } else if (txtContact.Text=="")
+            {
+                MessageBox.Show("Please Input Property's Contact");
+                check = false;
             }
             try
             {
@@ -77,20 +83,30 @@ namespace zPage
             }
             try
             {
-                int.Parse(txtPrice.Text);
+                decimal.Parse(txtPrice.Text);
             }
             catch (Exception)
             {
                 MessageBox.Show("Please Input Property's Price In Digits");
                 check = false;
             }
+            try
+            {
+                int.Parse(txtContact.Text);
+            } catch (Exception)
+            {
+                MessageBox.Show("Please Input Property's Contact In Digits");
+                check = false;
+            }
             if (check)
             {
                 Property p = new Property();
-               /* p.PName = txtName.Text;
-                p.PLocation = txtLocation.Text;
-                p.PArea = double.Parse(txtArea.Text);
-                p.PPrice = int.Parse(txtPrice.Text);*/
+                p.Name = txtName.Text;
+                p.Location = txtLocation.Text;
+                p.Area = double.Parse(txtArea.Text);
+                p.Price = decimal.Parse(txtPrice.Text);
+                p.Contact = txtContact.Text;
+                p.Available = ((bool)cbAvai.IsChecked ? "Y" : "N");
                 if (isEdit)
                 {
                     p.PropertyId = id;

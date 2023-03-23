@@ -53,5 +53,66 @@ namespace DataAccess
             }
             return features;
         }
+
+        public Feature GetById(int id)
+        {
+            try
+            {
+                var db = new PropMngContext();
+
+                return db.Features.First(m => m.FeatureId == id);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void Add(Feature[] prop)
+        {
+            try
+            {
+                var db = new PropMngContext();
+
+                db.Features.AddRange(prop);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void Update(Feature f)
+        {
+            try
+            {
+                var db = new PropMngContext();
+
+                db.Features.Update(f);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void DeleteById(int Id)
+        {
+            try
+            {
+                var db = new PropMngContext();
+                Feature f = new() { FeatureId = Id };
+                db.Features.Remove(f);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
     }
 }

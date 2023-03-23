@@ -27,12 +27,11 @@ namespace zPage
         private int landLordId;
         private string oldLL;
         List<string> names = new List<String>();
-        public OwnerChangeWindow(Property property,string oldLandLord)
+        public OwnerChangeWindow(Property property)
         {
             InitializeComponent();
             prop = property;
             LoadListLandLord();
-            oldLL = oldLandLord;
             lbTitle.Content = lbTitle.Content.ToString().Replace("Name", prop.Name);
         }
 
@@ -60,6 +59,7 @@ namespace zPage
             {
                 ll.LandlordId = landLordId;
                 propRepos.addOwner(ll, prop);
+                MessageBox.Show("Add new Owner for this property successfully!");
             }
             this.Close();
         }
