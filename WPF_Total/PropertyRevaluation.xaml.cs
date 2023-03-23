@@ -60,7 +60,7 @@ namespace zPage
                 }
                 try
                 {
-                    /*dg.ItemsSource = repos.GetListSearchByPrice(double.Parse(txtSearch.Text));*/
+                    dg.ItemsSource = repos.GetListSearchByPrice(decimal.Parse(txtSearch.Text));
                 }
                 catch (Exception)
                 {
