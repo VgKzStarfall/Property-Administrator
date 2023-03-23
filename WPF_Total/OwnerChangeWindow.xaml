@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:zPage"
         mc:Ignorable="d"
-        Title="OwnerChangeWindow" Height="400" Width="400">
-    <Grid>
-        <Label Name="lbTitle" Content="Changing Owner For Name" FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.344,-1.903"/>
-        <ComboBox Name="cbLandlord" HorizontalAlignment="Left" Margin="200,167,0,0" VerticalAlignment="Top" Width="120" DropDownClosed="cbLandlord_DropDownClosed"/>
-        <Label Content="Landlord" FontSize="20" FontWeight="Medium" HorizontalAlignment="Left" Margin="61,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.344,-1.903"/>
-        <Button Name="btnConfirm" Content="Confirm" HorizontalAlignment="Left" Margin="98,318,0,0" VerticalAlignment="Top" Click="btnConfirm_Click"/>
-        <Button Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="222,318,0,0" VerticalAlignment="Top" Click="btnCancel_Click"/>
+        Title="Administrator" Height="366" Width="305" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,-6">
+        <Label Name="lbTitle" Content="Owner Changing" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.344,-1.903" Foreground="#DDB700FF" Width="211"/>
+        <ComboBox Name="cbLandlord" HorizontalAlignment="Center" Width="168" DropDownClosed="cbLandlord_DropDownClosed" Height="35"/>
+        <Label Content="Landlord" FontSize="20" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.344,-1.903" Foreground="#DDDA00FF"/>
+        <Button Name="btnConfirm" Content="Confirm" HorizontalAlignment="Left" Margin="188,291,0,0" VerticalAlignment="Top" Click="btnConfirm_Click"/>
+        <Button Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="34,291,0,0" VerticalAlignment="Top" Click="btnCancel_Click"/>
+        <Image x:Name="bg" HorizontalAlignment="Center" Height="174" VerticalAlignment="Top" Width="238" Source="/gv.jpg" Stretch="Fill" Opacity="0.1" Margin="0,71,0,0"/>
     </Grid>
 </Window>

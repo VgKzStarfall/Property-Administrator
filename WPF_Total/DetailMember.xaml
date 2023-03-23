@@ -6,27 +6,31 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         xmlns:local="clr-namespace:zPage"
         mc:Ignorable="d"
-        Title="DetailMember" Height="400" Width="1000">
+        Title="Administrator" Height="400" Width="1000" ResizeMode="NoResize">
     <Grid>
-        <Label Name="lbName" Content="Label" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" FontWeight="Bold" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" Foreground="#FFAC18ED"/>
-        <materialDesign:PackIcon Kind="City" Margin="20,98,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
-        <Label Content="Location:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,88,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbCity" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,89,0,0" VerticalAlignment="Top"/>
-        <materialDesign:PackIcon Kind="World" Margin="20,166,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
-        <Label Content="Tel:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,155,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbTel" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,155,0,0" VerticalAlignment="Top"/>
-        <materialDesign:PackIcon Kind="Email" Margin="20,228,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
-        <Label Content="Citizen ID:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,216,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbCitizen" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,216,0,0" VerticalAlignment="Top"/>
-        <Button Name="btnUpdate" Content="Update" FontSize="20" HorizontalAlignment="Left" Margin="41,289,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnUpdate_Click"/>
-        <Button Name="btnDelete" Content="Delete" FontSize="20" HorizontalAlignment="Left" Margin="228,289,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnDelete_Click"/>
-        <Label Content="My Properties" FontSize="30" HorizontalAlignment="Left" Margin="450,57,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
-        <DataGrid Name="dgOwn" Margin="450,141,15,0" ColumnWidth="*" AutoGenerateColumns="False" Height="191" VerticalAlignment="Top">
+        <Image HorizontalAlignment="Left" Height="80" Margin="161,276,0,0" VerticalAlignment="Top" Width="95" Source="/judge.png" Stretch="Fill"/>
+        <Label x:Name="lbName" Content="Label" FontSize="30" HorizontalAlignment="Left" Margin="126,23,0,0" FontWeight="Bold" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" Foreground="#FFAC18ED"/>
+        <materialDesign:PackIcon Kind="City" Margin="20,121,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
+        <Label Content="Location:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,112,0,0" VerticalAlignment="Top" Foreground="#DDB700FF"/>
+        <Label x:Name="lbCity" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,112,0,0" VerticalAlignment="Top"/>
+        <materialDesign:PackIcon Kind="World" Margin="20,176,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
+        <Label Content="Tel:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,166,0,0" VerticalAlignment="Top" Foreground="#DDB700FF"/>
+        <Label x:Name="lbTel" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,166,0,0" VerticalAlignment="Top"/>
+        <materialDesign:PackIcon Kind="Email" Margin="20,225,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
+        <Label Content="Citizen ID:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,216,0,0" VerticalAlignment="Top" Foreground="#DDB700FF"/>
+        <Label x:Name="lbCitizen" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,216,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnUpdate" Content="Modify" FontSize="20" HorizontalAlignment="Left" Margin="20,294,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnUpdate_Click"/>
+        <Button x:Name="btnDelete" Content="Exterminate" FontSize="20" HorizontalAlignment="Left" Margin="265,295,0,0" VerticalAlignment="Top" Height="42" Width="143" Click="btnDelete_Click" Background="Red"/>
+        <Label Content="Domain Owned" FontSize="30" HorizontalAlignment="Left" Margin="747,21,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
+        <DataGrid x:Name="dgOwn" Margin="439,74,26,0" ColumnWidth="*" AutoGenerateColumns="False" Height="225" VerticalAlignment="Top">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding PropertyName}"></DataGridTextColumn>
-                <DataGridTextColumn Header="From" Binding="{Binding OwnStartDate}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Location" Binding="{Binding PropertyLocation}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding PropertyName}"/>
+                <DataGridTextColumn Header="From" Binding="{Binding OwnStartDate}"/>
+                <DataGridTextColumn Header="Location" Binding="{Binding PropertyLocation}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Image HorizontalAlignment="Left" Height="76" Margin="28,21,0,0" VerticalAlignment="Top" Width="83" Source="/admin.png"/>
+        <Rectangle HorizontalAlignment="Left" Height="2" Margin="439,45,0,0" VerticalAlignment="Top" Width="290" Fill="#FF9400FF"/>
+        <Rectangle HorizontalAlignment="Left" Height="2" Margin="126,84,0,0" VerticalAlignment="Top" Width="282" Fill="#FFCE00FF"/>
     </Grid>
 </Window>

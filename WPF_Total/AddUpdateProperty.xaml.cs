@@ -31,7 +31,7 @@ namespace zPage
             id = idChange;
             if (isEdit)
             {
-                lbTitle.Content = "Update A Property";
+                lbTitle.Content = "Modify a Property";
                 Property p = repository.GetPropertyByID(id);
                 if (p != null)
                 {
@@ -45,7 +45,7 @@ namespace zPage
             }
             else
             {
-                lbTitle.Content = "Add A Property";
+                lbTitle.Content = "Add a Property";
             }
         }
 
@@ -111,12 +111,12 @@ namespace zPage
                 {
                     p.PropertyId = id;
                     repository.UpdateProperty(p);
-                    MessageBox.Show("Update Successfully");
+                    MessageBox.Show("Update Successfully.");
                 }
                 else
                 {
                     repository.InsertProperty(p);
-                    MessageBox.Show("Insert successfully");
+                    MessageBox.Show("Insert successfully.");
                 }
                 this.Close();
             }

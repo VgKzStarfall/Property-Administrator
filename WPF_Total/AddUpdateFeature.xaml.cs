@@ -78,7 +78,7 @@ namespace zPage
                 {
                     ft.FeatureDescription = Line1.Text;
                     repos.updateFeature(ft);
-                    MessageBox.Show("Update Feature Successfully");
+                    MessageBox.Show("Update Successfully.");
                     this.Close();
                 }
             }

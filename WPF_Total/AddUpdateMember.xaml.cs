@@ -32,7 +32,7 @@ namespace zPage
             id = idChange;
             if (isEdit)
             {
-                lbTitle.Content = "Update A LandLord";
+                lbTitle.Content = "Modify Landlord Info";
                 Landlord p = landlordRepository.GetLandlordByID(idChange);
                 if (p != null)
                 {
@@ -44,7 +44,7 @@ namespace zPage
             }
             else
             {
-                lbTitle.Content = "Add A LandLord";
+                lbTitle.Content = "Register a new Landlord";
             }
         }
 
@@ -88,12 +88,12 @@ namespace zPage
                 {
                     p.LandlordId = id;
                     landlordRepository.UpdateLandlord(p);
-                    MessageBox.Show("Update Successfully");
+                    MessageBox.Show("Modification Successful.");
                 }
                 else
                 {
                     landlordRepository.InsertLandlord(p);
-                    MessageBox.Show("Insert successfully");
+                    MessageBox.Show("Register successfully.");
                 }
                 this.Close();
             }

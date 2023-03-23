@@ -52,11 +52,11 @@ namespace zPage
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Do you want to delete this landlord?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Is this Extermination necessary?", "Extermination Confirmation", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 landlordRepository.DeleteLandlord(landlord.LandlordId);
-                MessageBox.Show("Delete Successfully");
+                MessageBox.Show("Exterminated.");
             }
             this.Close();
         }

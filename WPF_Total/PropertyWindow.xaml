@@ -15,10 +15,10 @@
         <DataGrid Name="dg" AutoGenerateColumns="False" Margin="17,131,0,0" Height="269" VerticalAlignment="Top" HorizontalAlignment="Left" Width="650" ColumnWidth="*" MouseDoubleClick="dg_MouseDoubleClick" IsReadOnly="True" Grid.ColumnSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Width="100" Binding="{Binding Name}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Location" Width="100" Binding="{Binding Location}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Location" Width="120" Binding="{Binding Location}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Area" Width="100" Binding="{Binding Area}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Price" Width="100" Binding="{Binding Price}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Contact" Width="100" Binding="{Binding Contact}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Contact" Width="130" Binding="{Binding Contact}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Available" Binding="{Binding Available}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>

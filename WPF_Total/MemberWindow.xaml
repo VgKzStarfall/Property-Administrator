@@ -14,8 +14,8 @@
         <TextBlock Text="LANDLORD DATA" TextAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="61" Width="443" FontSize="48" Foreground="Red" FontWeight="Bold" Grid.Column="1" Margin="84,10,0,0"/>
         <DataGrid Name="dg" AutoGenerateColumns="False" Height="277" VerticalAlignment="Top" HorizontalAlignment="Left" Width="650" ColumnWidth="*" MouseDoubleClick="dg_MouseDoubleClick" Grid.ColumnSpan="2" IsReadOnly="True" Margin="17,143,0,0">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Width="200" Binding="{Binding Name}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Tel" Width="110" Binding="{Binding Tel}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Width="180" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Tel" Width="130" Binding="{Binding Tel}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Location" Width="150" Binding="{Binding Location}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Citizen ID" Width="120" Binding="{Binding CitizenId}"></DataGridTextColumn>
             </DataGrid.Columns>
