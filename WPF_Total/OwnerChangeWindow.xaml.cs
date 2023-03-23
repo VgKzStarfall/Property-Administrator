@@ -25,8 +25,8 @@ namespace zPage
         LandlordRepository landlordRepos = new LandlordRepository();
         PropertyRepository propRepos = new PropertyRepository();
         private int landLordId;
-        private string oldLL;
         List<string> names = new List<String>();
+        List<int> ids = new List<int>();
         public OwnerChangeWindow(Property property)
         {
             InitializeComponent();
@@ -43,9 +43,10 @@ namespace zPage
                 if (ll.Name!=null)
                 {
                     names.Add(ll.Name);
+                    ids.Add(ll.LandlordId);
                 }
             }
-            landLordId = listLL[0].LandlordId;
+            landLordId = ids[0];
             cbLandlord.ItemsSource = names;
             cbLandlord.Text = names[0];
         }
@@ -71,7 +72,7 @@ namespace zPage
 
         private void cbLandlord_DropDownClosed(object sender, EventArgs e)
         {
-            landLordId = names.IndexOf(cbLandlord.Text)+1;
+            landLordId = ids[names.IndexOf(cbLandlord.Text)];
             if (landLordId == -1)
             {
                 MessageBox.Show("Error");
