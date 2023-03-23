@@ -30,6 +30,6 @@ namespace DataAccess.Repos
         public void deleteFeature(int featureId) => FeatureDAO.Instance.DeleteById(featureId);
         public List<PriceHistory> getListHistory(int propId) => PriceHistoryDAO.Instance.getListPriceHist(propId);
         public void addPriceHist(PriceHistory p) => PriceHistoryDAO.Instance.add(p);
-        public Property getCurrentlyInsert() => PropertyDAO.Instance.getCurrentlyInsert();
+        public Property getCurrentlyInsert(Property p) => PropertyDAO.Instance.getCurrentlyInsert(p);
     }
 }

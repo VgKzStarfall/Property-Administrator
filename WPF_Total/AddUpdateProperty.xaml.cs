@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DataAccess.DataAccess;
 using DataAccess.Repos;
+using System.Text.RegularExpressions;
 
 namespace zPage
 {
@@ -53,6 +54,8 @@ namespace zPage
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            Regex regexTel = new Regex(@"\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})? ?(\w{1,10}\s?\d{1,6})?");
+            Match match = regexTel.Match(txtContact.Text);
             bool check = true;
             if (txtName.Text=="")
             {
@@ -92,10 +95,7 @@ namespace zPage
                 MessageBox.Show("Please Input Property's Price In Digits");
                 check = false;
             }
-            try
-            {
-                int.Parse(txtContact.Text);
-            } catch (Exception)
+            if (!match.Success)
             {
                 MessageBox.Show("Please Input Property's Contact In Digits");
                 check = false;
@@ -126,7 +126,7 @@ namespace zPage
                 else
                 {
                     repository.InsertProperty(p);
-                    Property pIn = repository.getCurrentlyInsert();
+                    Property pIn = repository.getCurrentlyInsert(p);
                     PriceHistory ph = new PriceHistory();
                     ph.PropertyId = pIn.PropertyId;
                     ph.Amount = p.Price;
