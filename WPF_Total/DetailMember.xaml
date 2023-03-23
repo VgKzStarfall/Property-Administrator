@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         xmlns:local="clr-namespace:zPage"
         mc:Ignorable="d"
-        Title="DetailMember" Height="400" Width="900">
+        Title="DetailMember" Height="400" Width="1000">
     <Grid>
         <Label Name="lbName" Content="Label" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" FontWeight="Bold" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" Foreground="#FFAC18ED"/>
         <materialDesign:PackIcon Kind="City" Margin="20,98,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
@@ -21,7 +21,7 @@
         <Button Name="btnUpdate" Content="Update" FontSize="20" HorizontalAlignment="Left" Margin="41,289,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnUpdate_Click"/>
         <Button Name="btnDelete" Content="Delete" FontSize="20" HorizontalAlignment="Left" Margin="228,289,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnDelete_Click"/>
         <Label Content="My Properties" FontSize="30" HorizontalAlignment="Left" Margin="450,57,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
-        <DataGrid Name="dgOwn" Margin="450,141,15,182" ColumnWidth="*" AutoGenerateColumns="False">
+        <DataGrid Name="dgOwn" Margin="450,141,15,0" ColumnWidth="*" AutoGenerateColumns="False" Height="191" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding PropertyName}"></DataGridTextColumn>
                 <DataGridTextColumn Header="From" Binding="{Binding OwnStartDate}"></DataGridTextColumn>

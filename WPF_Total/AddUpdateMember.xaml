@@ -10,19 +10,19 @@
     <Grid>
         <Label Name="lbTitle" Content="Add A Landlord" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,17,0,0"/>
         <TextBox Name="txtName" Margin="178,83,36,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
-        <materialDesign:PackIcon Kind="People" Margin="11,114,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="37,103,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <materialDesign:PackIcon Kind="People" Margin="10,105,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="37,94,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
         <TextBox Name="txtLocation" Margin="178,147,36,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
-        <materialDesign:PackIcon Kind="Location" Margin="10,178,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
-        <Label Content="Location" HorizontalAlignment="Left" Margin="37,167,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <materialDesign:PackIcon Kind="Location" Margin="10,169,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
+        <Label Content="Location" HorizontalAlignment="Left" Margin="37,158,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
         <TextBox Name="txtCitizenId" Margin="178,215,36,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
-        <Label Content="Citizen ID" HorizontalAlignment="Left" Margin="37,235,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <Label Content="Citizen ID" HorizontalAlignment="Left" Margin="37,226,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
         <TextBox Name="txtTel" Margin="178,283,36,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
-        <Label Content="Tel" HorizontalAlignment="Left" Margin="37,303,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
+        <Label Content="Tel" HorizontalAlignment="Left" Margin="37,294,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
         <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="58,372,0,0" FontSize="20" Width="128" Click="btnSubmit_Click" RenderTransformOrigin="0.527,-0.75" Height="44" VerticalAlignment="Top"/>
         <Button x:Name="btnCancel" Content="Cancel" Margin="286,372,0,0" FontSize="20" Click="btnCancel_Click" RenderTransformOrigin="1.523,0.543" HorizontalAlignment="Left" Width="128" Height="44" VerticalAlignment="Top"/>
-        <materialDesign:PackIcon Kind="CardAccountDetails" Margin="10,246,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
-        <materialDesign:PackIcon Kind="Phone" Margin="10,313,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
+        <materialDesign:PackIcon Kind="CardAccountDetails" Margin="10,237,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
+        <materialDesign:PackIcon Kind="Phone" Margin="10,304,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
 
     </Grid>
 </Window>
