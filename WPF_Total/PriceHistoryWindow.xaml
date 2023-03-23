@@ -8,7 +8,7 @@
         Title="PriceHistoryWindow" Height="450" Width="400">
     <Grid>
         <Label Name="lbTitle" Content="Price History For Name" FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <DataGrid Name="dgHist"  Margin="0,74,0,125" AutoGenerateColumns="False" ColumnWidth="*">
+        <DataGrid Name="dgHist" IsReadOnly="True" Margin="0,74,0,125" AutoGenerateColumns="False" ColumnWidth="*">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Date Time" Binding="{Binding Date}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Price" Binding="{Binding Amount}"></DataGridTextColumn>

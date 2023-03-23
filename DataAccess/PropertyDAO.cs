@@ -146,13 +146,14 @@ namespace DataAccess
             }
         }
 
-        public Property getCurrentlyInsert()
+        public Property getCurrentlyInsert(Property prop)
         {
             Property p = new Property();
             try
             {
                 var db = new PropMngContext();
-                p = db.Properties.Last();
+                p = db.Properties.FirstOrDefault(p => p.Name == prop.Name && p.Location == prop.Location && p.Price == prop.Price && p.Area == prop.Area
+                && p.Contact == prop.Contact && p.Available == prop.Available) as Property;
             }
             catch (Exception ex)
             {

@@ -30,6 +30,6 @@ namespace DataAccess.Repos
         void deleteFeature(int featureId);
         List<PriceHistory> getListHistory(int propId);
         void addPriceHist(PriceHistory p);
-        Property getCurrentlyInsert();
+        Property getCurrentlyInsert(Property p);
     }
 }
