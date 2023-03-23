@@ -23,7 +23,7 @@
                 <DataGridTextColumn Header="Available" Binding="{Binding Available}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="btnDelete" Content="Extermination" HorizontalAlignment="Left" Margin="342,361,0,0" VerticalAlignment="Top" Height="33" Width="104" Click="btnDelete_Click" Grid.Column="1" BorderBrush="White" Background="Red" FontSize="11"/>
+        <Button Name="btnDelete" Content="Removal" HorizontalAlignment="Left" Margin="342,361,0,0" VerticalAlignment="Top" Height="33" Width="104" Click="btnDelete_Click" Grid.Column="1" BorderBrush="White" Background="Red" FontSize="11"/>
         <Button Name="btnUpdate" Content="Modify" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="70" Margin="359,156,0,0" Click="btnUpdate_Click" Grid.Column="1" BorderBrush="White" Background="Red" FontSize="11" RenderTransformOrigin="1.014,1.076"/>
         <Button Name="btnCreate" Content="New" HorizontalAlignment="Right" Margin="0,111,39,0" VerticalAlignment="Top" Height="40" Width="70" Click="btnCreate_Click" BorderBrush="White" Background="Red" FontSize="11" Grid.Column="1"/>
         <TextBox Name="txtSearch" HorizontalAlignment="Left" Margin="137,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="396" Height="27" Grid.ColumnSpan="2"/>

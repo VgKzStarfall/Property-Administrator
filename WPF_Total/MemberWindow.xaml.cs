@@ -68,16 +68,16 @@ namespace zPage
             Landlord? item = dg.SelectedItem as Landlord;
             if (item != null)
             {
-                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Do you want to delete this landlord?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Do you want to exterminate this landlord?", "Extermination Confirmation", System.Windows.MessageBoxButton.YesNo);
                 if (messageBoxResult == MessageBoxResult.Yes)
                 {
                     landlordRepo.DeleteLandlord(item.LandlordId);
-                    MessageBox.Show("Delete Successfully");
+                    MessageBox.Show("Exterminated.");
                 }
             }
             else
             {
-                MessageBox.Show("Please Choose A Landlord To Delete");
+                MessageBox.Show("Who has to be exterminated?");
             }
             LoadData();
         }
