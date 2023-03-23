@@ -11,6 +11,7 @@
     <None Remove="123.png" />
     <None Remove="admin.png" />
     <None Remove="gv.jpg" />
+    <None Remove="judge.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +26,7 @@
   <ItemGroup>
     <Resource Include="admin.png" />
     <Resource Include="gv.jpg" />
+    <Resource Include="judge.png" />
   </ItemGroup>
 
 </Project>
