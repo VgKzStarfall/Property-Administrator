@@ -9,16 +9,16 @@
         Title="Administrator" Height="527" Width="1200" ResizeMode="NoResize">
     <Grid Margin="0,0,0,-6">
         <Label Name="lbName" Content="Detail" FontSize="30" HorizontalAlignment="Left" Margin="108,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
-        <Label Content="Location:" FontSize="20" HorizontalAlignment="Left" Margin="25,153,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
-        <Label Name="lbLocation" Content="Label" IsEnabled="False" FontSize="20" HorizontalAlignment="Left" Margin="143,153,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
-        <Label Content="Area:" FontSize="20" HorizontalAlignment="Left" Margin="25,193,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
-        <Label Name="lbArea" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,193,0,0" VerticalAlignment="Top" FontWeight="Medium" RenderTransformOrigin="0.627,1.308"/>
-        <Label Content="Price:" FontSize="20" HorizontalAlignment="Left" Margin="25,0,0,0" VerticalAlignment="Center" FontWeight="Heavy"/>
-        <Label Name="lbPrice" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,0,0,0" VerticalAlignment="Center" FontWeight="Medium"/>
+        <Label Content="Location:" FontSize="20" HorizontalAlignment="Left" Margin="28,131,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
+        <Label Name="lbLocation" Content="Label" IsEnabled="False" FontSize="20" HorizontalAlignment="Left" Margin="146,131,0,0" VerticalAlignment="Top" FontWeight="Medium" RenderTransformOrigin="0.499,-0.071"/>
+        <Label Content="Area:" FontSize="20" HorizontalAlignment="Left" Margin="28,184,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
+        <Label Name="lbArea" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="146,184,0,0" VerticalAlignment="Top" FontWeight="Medium" RenderTransformOrigin="0.627,1.308"/>
+        <Label Content="Price:" FontSize="20" HorizontalAlignment="Left" Margin="28,288,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
+        <Label Name="lbPrice" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="146,288,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
         <Button Name="btnUpdate" Content="Update" FontSize="20" HorizontalAlignment="Left" Margin="25,417,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnUpdate_Click"/>
         <Button Name="btnDelete" Content="Remove" FontSize="20" HorizontalAlignment="Left" Margin="262,417,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnDelete_Click" Background="Red" BorderBrush="#FF5C00FF"/>
-        <Label Content="Contact:" FontSize="20" HorizontalAlignment="Left" Margin="25,282,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
-        <Label x:Name="lbContact" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,282,0,0" VerticalAlignment="Top" FontWeight="Medium" RenderTransformOrigin="0.52,0.024"/>
+        <Label Content="Contact:" FontSize="20" HorizontalAlignment="Left" Margin="28,235,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
+        <Label x:Name="lbContact" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="146,235,0,0" VerticalAlignment="Top" FontWeight="Medium" RenderTransformOrigin="0.52,0.024"/>
         <CheckBox Name="cbAvai" Content="Available" HorizontalAlignment="Left" Margin="25,348,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Medium" Width="192"/>
         <Label Content="Features" FontSize="30" HorizontalAlignment="Left" Margin="465,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
         <Label Content="Owners History" FontSize="30" HorizontalAlignment="Left" Margin="465,162,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
@@ -37,6 +37,7 @@
         <Rectangle HorizontalAlignment="Left" Height="2" Margin="108,81,0,0" VerticalAlignment="Top" Width="289" Fill="#FFCE00FF"/>
         <Image HorizontalAlignment="Left" Height="80" Margin="154,388,0,0" VerticalAlignment="Top" Width="95" Source="/judge.png" Stretch="Fill"/>
         <Rectangle HorizontalAlignment="Left" Height="270" Margin="426,117,0,0" VerticalAlignment="Top" Width="2" Fill="#FFCE00FF"/>
+        <Button x:Name="btnPriceHist" Content="Price History" FontSize="20" HorizontalAlignment="Left" Margin="275,284,0,0" VerticalAlignment="Top" Height="43" Width="151" Click="btnPriceHist_Click"/>
 
     </Grid>
 </Window>

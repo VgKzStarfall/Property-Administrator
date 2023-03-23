@@ -146,6 +146,21 @@ namespace DataAccess
             }
         }
 
+        public Property getCurrentlyInsert()
+        {
+            Property p = new Property();
+            try
+            {
+                var db = new PropMngContext();
+                p = db.Properties.Last();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return p;
+        }
+
         public void Update(Property prop)
         {
             try

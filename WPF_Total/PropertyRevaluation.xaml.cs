@@ -82,9 +82,14 @@ namespace zPage
         {
             foreach (var item in repos.GetProperties())
             {
+                PriceHistory p = new PriceHistory();
+                p.PropertyId = item.PropertyId;
+                p.Date = DateTime.Now;
                 var number = GetPseudoDoubleWithinRange(-0.05, 0.05);
                 item.Price += (item.Price*number);
                 repos.UpdateProperty(item);
+                p.Amount = item.Price;
+                repos.addPriceHist(p);
             }
             LoadData();
         }

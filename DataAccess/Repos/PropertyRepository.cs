@@ -28,5 +28,8 @@ namespace DataAccess.Repos
         public void addFeatures(Feature[] features) => FeatureDAO.Instance.Add(features);
         public void updateFeature(Feature f) => FeatureDAO.Instance.Update(f);
         public void deleteFeature(int featureId) => FeatureDAO.Instance.DeleteById(featureId);
+        public List<PriceHistory> getListHistory(int propId) => PriceHistoryDAO.Instance.getListPriceHist(propId);
+        public void addPriceHist(PriceHistory p) => PriceHistoryDAO.Instance.add(p);
+        public Property getCurrentlyInsert() => PropertyDAO.Instance.getCurrentlyInsert();
     }
 }
