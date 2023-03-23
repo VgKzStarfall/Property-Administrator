@@ -9,10 +9,10 @@
         Title="Administrator" Height="527" Width="1200" ResizeMode="NoResize">
     <Grid Margin="0,0,0,-6">
         <Label Name="lbName" Content="Detail" FontSize="30" HorizontalAlignment="Left" Margin="108,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
-        <Label Content="Location:" FontSize="20" HorizontalAlignment="Left" Margin="25,100,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
-        <Label Name="lbLocation" Content="Label" IsEnabled="False" FontSize="20" HorizontalAlignment="Left" Margin="143,100,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
-        <Label Content="Area:" FontSize="20" HorizontalAlignment="Left" Margin="25,160,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
-        <Label Name="lbArea" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,160,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
+        <Label Content="Location:" FontSize="20" HorizontalAlignment="Left" Margin="25,153,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
+        <Label Name="lbLocation" Content="Label" IsEnabled="False" FontSize="20" HorizontalAlignment="Left" Margin="143,153,0,0" VerticalAlignment="Top" FontWeight="Medium"/>
+        <Label Content="Area:" FontSize="20" HorizontalAlignment="Left" Margin="25,193,0,0" VerticalAlignment="Top" FontWeight="Heavy"/>
+        <Label Name="lbArea" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,193,0,0" VerticalAlignment="Top" FontWeight="Medium" RenderTransformOrigin="0.627,1.308"/>
         <Label Content="Price:" FontSize="20" HorizontalAlignment="Left" Margin="25,0,0,0" VerticalAlignment="Center" FontWeight="Heavy"/>
         <Label Name="lbPrice" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,0,0,0" VerticalAlignment="Center" FontWeight="Medium"/>
         <Button Name="btnUpdate" Content="Update" FontSize="20" HorizontalAlignment="Left" Margin="25,417,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnUpdate_Click"/>
@@ -21,8 +21,8 @@
         <Label x:Name="lbContact" Content="Label" FontSize="20" HorizontalAlignment="Left" Margin="143,282,0,0" VerticalAlignment="Top" FontWeight="Medium" RenderTransformOrigin="0.52,0.024"/>
         <CheckBox Name="cbAvai" Content="Available" HorizontalAlignment="Left" Margin="25,348,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Medium" Width="192"/>
         <Label Content="Features" FontSize="30" HorizontalAlignment="Left" Margin="465,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
-        <Label Content="Owners History" FontSize="30" HorizontalAlignment="Left" Margin="465,186,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
-        <DataGrid Name="dgHist" IsReadOnly="True" Margin="465,247,29,77" ColumnWidth="*" AutoGenerateColumns="False">
+        <Label Content="Owners History" FontSize="30" HorizontalAlignment="Left" Margin="465,162,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
+        <DataGrid Name="dgHist" IsReadOnly="True" Margin="465,217,29,107" ColumnWidth="*" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Owner" Binding="{Binding LandlordName}"></DataGridTextColumn>
                 <DataGridTextColumn Header="From" Binding="{Binding OwnStartDate}"></DataGridTextColumn>
@@ -30,7 +30,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="btnNewOwner" Content="New Owner" FontSize="20" HorizontalAlignment="Left" Margin="465,417,0,0" VerticalAlignment="Top" Height="43" Width="190" Click="btnChangeOwner_Click"/>
-        <Label x:Name="lbFeature" ClipToBounds="True" Content="Label" IsEnabled="False" FontSize="20" HorizontalAlignment="Left" Margin="465,88,0,0" VerticalAlignment="Top" FontWeight="Medium" Height="93" Width="706"/>
+        <Label x:Name="lbFeature" ClipToBounds="True" Content="Label" IsEnabled="False" FontSize="20" HorizontalAlignment="Left" Margin="465,77,0,0" VerticalAlignment="Top" FontWeight="Medium" Height="80" Width="706"/>
         <Button x:Name="btnEndOwner" Content="End Ownership" FontSize="20" HorizontalAlignment="Left" Margin="981,417,0,0" VerticalAlignment="Top" Height="43" Width="190" Click="btnEndOwner_Click"/>
         <Button x:Name="btnEditFeature" Content="Edit Features" FontSize="20" HorizontalAlignment="Left" Margin="997,20,0,0" VerticalAlignment="Top" Height="43" Width="174" Click="btnEditFeature_Click"/>
         <Image HorizontalAlignment="Left" Height="67" Margin="28,21,0,0" VerticalAlignment="Top" Width="76" Source="/admin.png"/>
