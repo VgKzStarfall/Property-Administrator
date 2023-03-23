@@ -62,6 +62,10 @@ namespace zPage
                 }
                 listProp.Sort((x, y) => -DateTime.Compare(x.OwnStartDate, y.OwnStartDate));
                 dgHist.ItemsSource = listProp;
+                if (listProp.Count > 0)
+                {
+                    newestLL = listProp[0].LandlordName;
+                }
             }
         }
 

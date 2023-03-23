@@ -36,11 +36,10 @@ namespace zPage
                 Landlord p = landlordRepository.GetLandlordByID(idChange);
                 if (p != null)
                 {
-                    /*txtName.Text = p.CompanyName;
-                    txtCity.Text = p.City;
-                    txtCountry.Text = p.Country;
-                    txtPassword.Text = p.Password;
-                    txtEmail.Text = p.Email;*/
+                    txtName.Text = p.Name;
+                    txtLocation.Text = p.Location;
+                    txtTel.Text = p.Tel;
+                    txtCitizenId.Text = p.CitizenId;
                 }
             }
             else
@@ -51,42 +50,40 @@ namespace zPage
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            Match match = regex.Match(txtEmail.Text);
+            Regex regexTel = new Regex(@"^[0-9]{10}$");
+            Regex regexId = new Regex(@"^[0-9]{12}$");
+            Regex regexName = new Regex(@"^([a-zA-Z]{1,30}\s[a-zA-Z]{1,30}){1,10}$");
+            Match match = regexTel.Match(txtTel.Text);
+            Match matchCitizenId = regexId.Match(txtCitizenId.Text);
+            Match matchName = regexName.Match(txtName.Text);
             bool check = true;
-            if (txtName.Text == "")
+            if (txtName.Text == "" || !matchName.Success)
             {
-                MessageBox.Show("Please Input Member's Company Name");
+                MessageBox.Show("Please Input Landlord's Name");
                 check = false;
             }
-            else if (txtCity.Text == "")
+            else if (txtLocation.Text == "")
             {
-                MessageBox.Show("Please Input Member's City");
+                MessageBox.Show("Please Input Landlord's Location");
                 check = false;
             }
-            else if (txtCountry.Text == "")
+            else if (txtTel.Text == "" || !match.Success)
             {
-                MessageBox.Show("Please Input Member's Country");
+                MessageBox.Show("Please Input Landlord's Phone Correctly");
                 check = false;
             }
-            else if (txtPassword.Text == "")
+            else if (txtCitizenId.Text == "" || !matchCitizenId.Success)
             {
-                MessageBox.Show("Please Input Member's Password");
-                check = false;
-            }
-            else if (txtEmail.Text == "" || !match.Success)
-            {
-                MessageBox.Show("Please Input Email Or Right Format (abc@abc.abc)");
+                MessageBox.Show("Please Input Landlord's Citizen ID Correctly");
                 check = false;
             }
             if (check)
             {
                 Landlord p = new Landlord();
-               /* p.CompanyName = txtName.Text;
-                p.City = txtCity.Text;
-                p.Country = txtCountry.Text;
-                p.Password = txtPassword.Text;
-                p.Email = txtEmail.Text;*/
+                p.Name = txtName.Text;
+                p.Location = txtLocation.Text;
+                p.CitizenId = txtCitizenId.Text;
+                p.Tel = txtTel.Text;
                 if (isEdit)
                 {
                     p.LandlordId = id;

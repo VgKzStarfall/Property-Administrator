@@ -22,6 +22,7 @@ namespace zPage
     public partial class MemberWindow : Window
     {
         LandlordRepository landlordRepo;
+        PropertyRepository propertyRepository = new PropertyRepository();
         string searchMem;
         public MemberWindow(LandlordRepository landlordRepository)
         {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess.DataAccess;
+using DataAccess.Repos;
 using DataAccess.ModelShow;
 
 namespace DataAccess
@@ -100,6 +101,33 @@ namespace DataAccess
             }
 
             return propShow;
+        }
+
+        public List<PropertyOwnerShow> getPropertyOwnerListByOwner(int landlord)
+        {
+            List<PropertyOwner> properties;
+            List<PropertyOwnerShow> myProperties;
+            try
+            {
+                PropertyRepository propertyRepository = new PropertyRepository();
+                myProperties = new List<PropertyOwnerShow>();
+                var db = new PropMngContext();
+                properties = db.PropertyOwners.Where(property => property.LandlordId >= landlord).ToList();
+
+                foreach (var prop in properties)
+                {
+                    PropertyOwnerShow pos = new PropertyOwnerShow();
+                    pos.PropertyName = db.Properties.FirstOrDefault(l => l.PropertyId == prop.PropertyId).Name;
+                    pos.PropertyLocation = db.Properties.FirstOrDefault(l => l.PropertyId == prop.PropertyId).Location;
+                    pos.OwnStartDate = (DateTime)prop.OwnStartDate;
+                    myProperties.Add(pos);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return myProperties;
         }
     }
 }

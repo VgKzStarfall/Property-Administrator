@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DataAccess.DataAccess;
+using DataAccess.ModelShow;
 using DataAccess.Repos;
 
 namespace zPage
@@ -23,6 +24,7 @@ namespace zPage
     {
         Landlord landlord;
         LandlordRepository landlordRepository = new LandlordRepository();
+        PropertyRepository propertyRepository = new PropertyRepository();
         public DetailMember(Landlord land)
         {
             InitializeComponent();
@@ -33,10 +35,12 @@ namespace zPage
         {
             if (landlord != null)
             {
-                /*lbName.Content = landlord.Name
-                lbCity.Content = landlord.City;
-                lbCountry.Content = landlord.Country;
-                lbEmail.Content = landlord.Email;*/
+                lbName.Content = landlord.Name;
+                lbCity.Content = landlord.Location;
+                lbTel.Content = landlord.Tel;
+                lbCitizen.Content = landlord.CitizenId;
+                List<PropertyOwnerShow> proList = propertyRepository.getPropertyOwnerListByOwner(landlord.LandlordId);
+                dgOwn.ItemsSource = proList;
             }
         }
         private void btnUpdate_Click(object sender, RoutedEventArgs e)

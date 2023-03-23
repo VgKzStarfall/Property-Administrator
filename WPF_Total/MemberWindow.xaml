@@ -12,20 +12,18 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <TextBlock Text="LANDLORD DATA" TextAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="61" Width="443" FontSize="48" Foreground="Red" FontWeight="Bold" Grid.Column="1" Margin="84,10,0,0"/>
-        <DataGrid Name="dg" AutoGenerateColumns="False" Height="277" VerticalAlignment="Top" HorizontalAlignment="Left" Width="658" ColumnWidth="*" MouseDoubleClick="dg_MouseDoubleClick" Grid.ColumnSpan="2" IsReadOnly="True" Margin="9,128,0,0">
+        <DataGrid Name="dg" AutoGenerateColumns="False" Height="277" VerticalAlignment="Top" HorizontalAlignment="Left" Width="518" ColumnWidth="*" MouseDoubleClick="dg_MouseDoubleClick" Grid.ColumnSpan="2" IsReadOnly="True" Margin="9,128,0,0">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Width="50" Binding="{Binding LandlordId}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Name" Width="100" Binding="{Binding Name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Tel" Width="120" Binding="{Binding Tel}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Location" Width="120" Binding="{Binding Location}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Citizen ID" Width="120" Binding="{Binding CitizenId}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Property" Binding="{Binding PropertyOwners}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
 
         <Button Name="btnDelete" Content="Extermination" HorizontalAlignment="Left" Margin="677,378,0,0" VerticalAlignment="Top" Height="27" Width="112" Click="btnDelete_Click" Grid.Column="1" Background="Red" FontSize="12" BorderBrush="White" Cursor="Cross"/>
         <Button Name="btnUpdate" Content="Modify" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="70" Margin="698,156,0,0" Click="btnUpdate_Click" Grid.Column="1" Background="Red" FontSize="11" BorderBrush="White"/>
-        <Button Name="btnCreate" Content="New" HorizontalAlignment="Left" Margin="698,111,0,0" VerticalAlignment="Top" Height="40" Width="70" Click="btnCreate_Click" Grid.Column="1" Background="Red" FontSize="11" BorderBrush="White"/>
+        <Button Name="btnCreate" Content="New" HorizontalAlignment="Left" Margin="597,156,0,0" VerticalAlignment="Top" Height="40" Width="70" Click="btnCreate_Click" Grid.Column="1" Background="Red" FontSize="11" BorderBrush="White" RenderTransformOrigin="-0.616,1.402"/>
         <TextBox Name="txtSearch" HorizontalAlignment="Left" Margin="139,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398" Height="27" Grid.Column="1"/>
         <Button Name="btnSearch" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="112" Margin="555,92,0,0" Click="btnSearch_Click" Grid.Column="1" Background="Red" BorderBrush="White"/>
         <ComboBox Name="searchType" HorizontalAlignment="Left" Margin="19,89,0,0" VerticalAlignment="Top" Width="120" Height="27" SelectedValuePath="Name" DropDownClosed="searchType_DropDownClosed" Grid.Column="1">
