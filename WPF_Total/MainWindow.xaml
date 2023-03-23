@@ -20,23 +20,23 @@
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
-                    <GradientStop Color="Purple" Offset="0.643"/>
+                    <GradientStop Color="Red" Offset="0.643"/>
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
 
         <Button Content="Landlord Management" x:Name="btnOption1" Click="btnOption1_Click"
-            HorizontalAlignment="Center" Margin="0,148,0,320" Width="216" FontWeight="Bold" Visibility="Visible" Background="White" Foreground="#DDF100FF" BorderBrush="White"/>
+            HorizontalAlignment="Center" Margin="0,148,0,320" Width="216" FontWeight="Bold" Visibility="Visible" Background="White" Foreground="#DDFF0000" BorderBrush="White"/>
         <Button Content="Property Management" x:Name="btnOption2"
-            HorizontalAlignment="Center" Margin="0,234,0,234" Width="216" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="White" Click="btnOption2_Click" Foreground="#DDF100FF"/>
+            HorizontalAlignment="Center" Margin="0,234,0,234" Width="216" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="White" Click="btnOption2_Click" Foreground="#DDFF0000"/>
         <Button Content="Property Revaluation" x:Name="btnOption3"
-            HorizontalAlignment="Center" Margin="0,325,0,143" Width="216" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="White" Foreground="#DDF100FF" Click="btnOption3_Click"/>
+            HorizontalAlignment="Center" Margin="0,325,0,143" Width="216" FontWeight="Bold" Visibility="Visible" Background="White" BorderBrush="White" Foreground="#DDFF0000" Click="btnOption3_Click"/>
 
         <Label x:Name="lb_Secondary" Content="Actions made here are crucial." HorizontalAlignment="Center" VerticalAlignment="Top" Height="19" Width="444" FontSize="9" Margin="0,420,0,0" FontStyle="Italic" HorizontalContentAlignment="Center" FontWeight="Normal" Foreground="White" VerticalContentAlignment="Center">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
-                    <GradientStop Color="Purple" Offset="0.643"/>
+                    <GradientStop Color="Red" Offset="0.643"/>
                 </LinearGradientBrush>
             </Label.Background>
         </Label>

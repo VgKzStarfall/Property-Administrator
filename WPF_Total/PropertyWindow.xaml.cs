@@ -43,15 +43,15 @@ namespace zPage
             Property? item = dg.SelectedItem as Property;
             if (item != null)
             {
-                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Do you want to delete this property?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Do you want to remove this property?", "Removal Confirmation", System.Windows.MessageBoxButton.YesNo);
                 if (messageBoxResult == MessageBoxResult.Yes)
                 {
                     repos.DeleteProperty(item.PropertyId);
-                    MessageBox.Show("Delete Successfully");
+                    MessageBox.Show("Removed.");
                 }
             } else
             {
-                MessageBox.Show("Please Choose A Property To Delete");
+                MessageBox.Show("Which property need updating?");
             }
             LoadData();
         }
