@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="OwnerChangeWindow" Height="400" Width="400">
     <Grid>
-        <Label Content="Changing Owner For Name" FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.344,-1.903"/>
+        <Label Name="lbTitle" Content="Changing Owner For Name" FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.344,-1.903"/>
         <ComboBox Name="cbLandlord" HorizontalAlignment="Left" Margin="200,167,0,0" VerticalAlignment="Top" Width="120" DropDownClosed="cbLandlord_DropDownClosed"/>
         <Label Content="Landlord" FontSize="20" FontWeight="Medium" HorizontalAlignment="Left" Margin="61,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.344,-1.903"/>
         <Button Name="btnConfirm" Content="Confirm" HorizontalAlignment="Left" Margin="98,318,0,0" VerticalAlignment="Top" Click="btnConfirm_Click"/>

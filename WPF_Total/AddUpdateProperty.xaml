@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"        
         xmlns:local="clr-namespace:zPage"
         mc:Ignorable="d"
-        Title="AddUpdateProperty" Height="450" Width="400">
+        Title="AddUpdateProperty" Height="550" Width="400">
     <Grid>
         <Label Name="lbTitle" Content="Add A Property" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="SemiBold"/>
         <TextBox Name="txtName" Margin="130,74,27,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
@@ -21,8 +21,11 @@
         <TextBox Name="txtPrice" Margin="130,271,27,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
         <materialDesign:PackIcon Kind="CurrencyUsd" Margin="28,286,0,0" Foreground="Yellow"/>
         <Label Content="Price" HorizontalAlignment="Left" Margin="43,276,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939" FontWeight="Medium"/>
-        <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="53,354,0,0" VerticalAlignment="Top" Height="47" FontSize="20" Width="128" Click="btnSubmit_Click"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="233,354,0,0" VerticalAlignment="Top" Height="47" FontSize="20" Width="128" Click="btnCancel_Click"/>
+        <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="37,461,0,0" VerticalAlignment="Top" Height="47" FontSize="20" Width="128" Click="btnSubmit_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="217,461,0,0" VerticalAlignment="Top" Height="47" FontSize="20" Width="128" Click="btnCancel_Click"/>
+        <TextBox x:Name="txtContact" Margin="130,334,27,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
+        <Label Content="Contact" HorizontalAlignment="Left" Margin="43,339,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939" FontWeight="Medium"/>
+        <CheckBox Name="cbAvai" Content="Available" FontSize="20" FontWeight="Medium" HorizontalAlignment="Left" Margin="43,404,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

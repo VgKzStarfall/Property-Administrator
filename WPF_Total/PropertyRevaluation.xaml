@@ -1,0 +1,38 @@
+﻿<Window x:Class="zPage.PropertyRevaluation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:zPage"
+        mc:Ignorable="d"
+        Title="PropertyRevaluation" Height="470" Width="794" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="26*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="PROPERTY REVALUATION" TextAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="71" Width="608" FontSize="50" Foreground="Red" Margin="79,10,0,0" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <DataGrid Name="dg" AutoGenerateColumns="False" Margin="17,131,0,0" Height="269" VerticalAlignment="Top" HorizontalAlignment="Left" Width="500" ColumnWidth="*" IsReadOnly="True" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="50" Binding="{Binding PropertyId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Width="150" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Location" Width="150" Binding="{Binding Location}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Price" Width="150" Binding="{Binding Price}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="263,367,0,0" VerticalAlignment="Top" Height="33" Width="104" Click="btnRefresh_Click" Grid.Column="1" BorderBrush="White" Background="Red" FontSize="11"/>
+        <Button Name="btnRevaluate" Content="Revaluate" HorizontalAlignment="Left" Margin="263,173,0,0" VerticalAlignment="Top" Height="33" Width="104" Click="btnRevaluate_Click" Grid.Column="1" BorderBrush="White" Background="Red" FontSize="11"/>
+        <TextBox Name="txtSearch" HorizontalAlignment="Left" Margin="137,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="347" Height="27" Grid.ColumnSpan="2"/>
+        <Button Name="btnSearch" Content="Search" VerticalAlignment="Top" Height="27" Margin="166,87,177,0" Click="btnSearch_Click" Grid.Column="1" RenderTransformOrigin="-0.333,0.779" BorderBrush="White" Background="Red" FontSize="11"/>
+        <ComboBox Name="searchType" HorizontalAlignment="Left" Margin="17,87,0,0" VerticalAlignment="Top" Width="120" Height="27" SelectedValuePath="Content" DropDownClosed="searchType_DropDownClosed" materialDesign:HintAssist.Hint="Name">
+            <ComboBoxItem Content="PropertyId"/>
+            <ComboBoxItem Content="Name"/>
+            <ComboBoxItem Content="Location"/>
+            <ComboBoxItem Content="Price"/>
+        </ComboBox>
+        <Image x:Name="icon" HorizontalAlignment="Left" Height="73" Margin="10,7,0,0" VerticalAlignment="Top" Width="69" Source="/admin.png" OpacityMask="Red"/>
+        <Image x:Name="scale" HorizontalAlignment="Left" Height="83" Margin="256,242,0,0" VerticalAlignment="Top" Width="118" Source="/scale.png" Stretch="Fill" Grid.Column="1"/>
+        <Image x:Name="bg" HorizontalAlignment="Left" Height="66" Margin="357,10,0,0" VerticalAlignment="Top" Width="98" Source="/gv.jpg" Stretch="Fill" Opacity="0.5" Grid.Column="1"/>
+    </Grid>
+</Window>

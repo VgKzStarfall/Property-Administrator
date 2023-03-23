@@ -41,7 +41,8 @@ namespace MultiPage_A
 
         private void btnOption3_Click(object sender, RoutedEventArgs e)
         {
-
+            var window = new PropertyRevaluation(new PropertyRepository());
+            window.ShowDialog();
         }
     }
 }

@@ -23,5 +23,10 @@ namespace DataAccess.Repos
         public List<PropertyOwnerShow> getOwnerHist(Property prop) => PropertyOwnerDAO.Instance.getListOwnersHistory(prop);
         public string getFeatures(int propId) => FeatureDAO.Instance.listFeatureToString(FeatureDAO.Instance.GetListByPropId(propId));
         public List<PropertyOwnerShow> getPropertyOwnerListByOwner(int landlord) => PropertyOwnerDAO.Instance.getPropertyOwnerListByOwner(landlord);
+        public void endOwner(Property prop) => PropertyOwnerDAO.Instance.endOwner(prop);
+        public List<Feature> listFeatures(Property prop) => FeatureDAO.Instance.GetListByPropId(prop.PropertyId);
+        public void addFeatures(Feature[] features) => FeatureDAO.Instance.Add(features);
+        public void updateFeature(Feature f) => FeatureDAO.Instance.Update(f);
+        public void deleteFeature(int featureId) => FeatureDAO.Instance.DeleteById(featureId);
     }
 }
