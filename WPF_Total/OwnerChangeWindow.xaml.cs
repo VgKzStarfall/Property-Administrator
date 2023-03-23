@@ -33,6 +33,7 @@ namespace zPage
             prop = property;
             LoadListLandLord();
             oldLL = oldLandLord;
+            lbTitle.Content = lbTitle.Content.ToString().Replace("Name", prop.Name);
         }
 
         void LoadListLandLord()

@@ -33,7 +33,7 @@ namespace DataAccess
                 newOwner(owner, prop);
             } else
             {
-                endOwner(owner, prop);
+                endOwner(prop);
                 newOwner(owner, prop);
             }
         }
@@ -54,7 +54,7 @@ namespace DataAccess
                 throw new Exception(ex.Message);
             }
         }
-        public void endOwner(Landlord owner, Property prop)
+        public void endOwner(Property prop)
         {
             try
             {
