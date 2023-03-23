@@ -161,8 +161,28 @@ namespace DataAccess
             }
         }
 
-    
+        public List<Property> getPropertyListByOwner(int landlord)
+        {
+            List<PropertyOwner> properties;
+            List<Property> myProperties;
+            try
+            {     
+                myProperties = new List<Property>();
+                var db = new PropMngContext();
+                properties = db.PropertyOwners.Where(property => property.LandlordId >= landlord).ToList();
 
-        
+                foreach (var prop in properties)
+                {
+                    myProperties.Add(GetById((int)prop.PropertyId));
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return myProperties;
+        }
+
+
     }
 }

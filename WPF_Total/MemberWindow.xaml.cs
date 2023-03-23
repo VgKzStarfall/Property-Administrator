@@ -34,18 +34,7 @@ namespace zPage
         }
         public void LoadData()
         {
-            IEnumerable<Landlord> landlords = landlordRepo.GetLandlord();
-            List<PropertyOwner> propertyOwners;
-            List<Property> properties;
-            foreach (Landlord landlord in landlords)
-            {
-                propertyOwners = propertyRepository.getPropertyOwnerListByOwner(landlord.LandlordId);
-                foreach (PropertyOwner propertyOwner in propertyOwners)
-                {
-                    /*properties = propertyRepository.GetPropertyByID */
-                }
-            }
-            dg.ItemsSource = landlords;
+            dg.ItemsSource = landlordRepo.GetLandlord();
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)

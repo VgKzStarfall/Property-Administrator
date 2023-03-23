@@ -6,20 +6,27 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         xmlns:local="clr-namespace:zPage"
         mc:Ignorable="d"
-        Title="DetailMember" Height="400" Width="500">
+        Title="DetailMember" Height="400" Width="900">
     <Grid>
         <Label Name="lbName" Content="Label" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" FontWeight="Bold" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" Foreground="#FFAC18ED"/>
         <materialDesign:PackIcon Kind="City" Margin="20,98,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
-        <Label Content="City:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,88,0,0" VerticalAlignment="Top"/>
+        <Label Content="Location:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,88,0,0" VerticalAlignment="Top"/>
         <Label Name="lbCity" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,89,0,0" VerticalAlignment="Top"/>
         <materialDesign:PackIcon Kind="World" Margin="20,166,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
-        <Label Content="Country:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,155,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbCountry" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,155,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tel:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,155,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbTel" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,155,0,0" VerticalAlignment="Top"/>
         <materialDesign:PackIcon Kind="Email" Margin="20,228,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
-        <Label Content="Email:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,216,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbEmail" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,216,0,0" VerticalAlignment="Top"/>
+        <Label Content="Citizen ID:" FontSize="20"  FontWeight="Heavy" HorizontalAlignment="Left" Margin="41,216,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbCitizen" Content="Label"  FontWeight="Medium" FontSize="20" HorizontalAlignment="Left" Margin="200,216,0,0" VerticalAlignment="Top"/>
         <Button Name="btnUpdate" Content="Update" FontSize="20" HorizontalAlignment="Left" Margin="41,289,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnUpdate_Click"/>
         <Button Name="btnDelete" Content="Delete" FontSize="20" HorizontalAlignment="Left" Margin="228,289,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnDelete_Click"/>
-
+        <Label Content="My Properties" FontSize="30" HorizontalAlignment="Left" Margin="450,57,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
+        <DataGrid Name="dgOwn" Margin="450,141,15,182" ColumnWidth="*" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding PropertyName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="From" Binding="{Binding OwnStartDate}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Location" Binding="{Binding PropertyLocation}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

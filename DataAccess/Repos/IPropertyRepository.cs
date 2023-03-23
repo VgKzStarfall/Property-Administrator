@@ -22,6 +22,6 @@ namespace DataAccess.Repos
         void addOwner(Landlord owner, Property prop);
         List<PropertyOwnerShow> getOwnerHist(Property prop);
         string getFeatures(int propId);
-        List<PropertyOwner> getPropertyOwnerListByOwner(int landlord);
+        List<PropertyOwnerShow> getPropertyOwnerListByOwner(int landlord);
     }
 }

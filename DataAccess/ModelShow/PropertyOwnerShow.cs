@@ -12,5 +12,8 @@ namespace DataAccess.ModelShow
         public string LandlordName { get; set; }
         public DateTime OwnStartDate { get; set; }
         public DateTime? OwnEndDate { get; set; }
+        public string PropertyName { get; set; }
+
+        public string PropertyLocation { get; set; }
     }
 }
