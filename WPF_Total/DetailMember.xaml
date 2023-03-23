@@ -22,7 +22,7 @@
         <Button x:Name="btnUpdate" Content="Modify" FontSize="20" HorizontalAlignment="Left" Margin="20,294,0,0" VerticalAlignment="Top" Height="43" Width="116" Click="btnUpdate_Click"/>
         <Button x:Name="btnDelete" Content="Exterminate" FontSize="20" HorizontalAlignment="Left" Margin="265,295,0,0" VerticalAlignment="Top" Height="42" Width="143" Click="btnDelete_Click" Background="Red"/>
         <Label Content="Domain Owned" FontSize="30" HorizontalAlignment="Left" Margin="747,21,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
-        <DataGrid x:Name="dgOwn" Margin="439,74,26,0" ColumnWidth="*" AutoGenerateColumns="False" Height="225" VerticalAlignment="Top">
+        <DataGrid x:Name="dgOwn" Margin="439,113,26,0" ColumnWidth="*" AutoGenerateColumns="False" Height="225" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding PropertyName}"/>
                 <DataGridTextColumn Header="From" Binding="{Binding OwnStartDate}"/>

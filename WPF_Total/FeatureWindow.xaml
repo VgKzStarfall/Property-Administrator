@@ -7,16 +7,17 @@
         mc:Ignorable="d"
         Title="FeatureWindow" Height="450" Width="400" ResizeMode="NoResize">
     <Grid>
-        <Label Name="lbTitle" Content="Feature Detail" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="45" Width="212" Foreground="#DD8800FF"/>
-        <DataGrid Name="dgFeatures" IsReadOnly="True" Margin="10,60,10,112" AutoGenerateColumns="False" ColumnWidth="*">
+        <Image x:Name="bg" HorizontalAlignment="Center" Height="112" VerticalAlignment="Top" Width="224" Source="/gv.jpg" Stretch="Fill" Opacity="0.25" Margin="0,322,0,0"/>
+
+        <Label x:Name="lbTitle" Content="Feature Detail" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="45" Width="212" Foreground="#DD8800FF"/>
+        <DataGrid x:Name="dgFeatures" IsReadOnly="True" Margin="10,60,10,112" AutoGenerateColumns="False" ColumnWidth="*">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Feature Description" Binding="{Binding FeatureDescription}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Feature Description" Binding="{Binding FeatureDescription}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="btnNew" Content="New" HorizontalAlignment="Left" Margin="10,349,0,0" VerticalAlignment="Top" Click="btnNew_Click" Width="78"/>
-        <Button Name="btnUpdate"  Content="Update" HorizontalAlignment="Center" Margin="0,349,0,0" VerticalAlignment="Top" Click="btnUpdate_Click"/>
-        <Button Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="312,349,0,0" VerticalAlignment="Top" Click="btnDelete_Click" Width="78"/>
-        <Image x:Name="bg" HorizontalAlignment="Center" Height="307" VerticalAlignment="Center" Width="416" Source="/gv.jpg" Stretch="Fill" Opacity="0.25"/>
+        <Button x:Name="btnNew" Content="New" HorizontalAlignment="Left" Margin="10,349,0,0" VerticalAlignment="Top" Click="btnNew_Click" Width="78"/>
+        <Button x:Name="btnUpdate"  Content="Update" HorizontalAlignment="Center" Margin="0,349,0,0" VerticalAlignment="Top" Click="btnUpdate_Click"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="312,349,0,0" VerticalAlignment="Top" Click="btnDelete_Click" Width="78"/>
 
     </Grid>
 </Window>
