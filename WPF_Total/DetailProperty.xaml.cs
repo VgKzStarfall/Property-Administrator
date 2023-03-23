@@ -46,7 +46,10 @@ namespace zPage
                 List<PropertyOwnerShow> listProp = repos.getOwnerHist(prop);
                 listProp.Sort((x, y) => -DateTime.Compare(x.OwnStartDate, y.OwnStartDate));
                 dgHist.ItemsSource = listProp;
-                newestLL = listProp[0].LandlordName;
+                if (listProp.Count > 0)
+                {
+                    newestLL = listProp[0].LandlordName;
+                }
             }
         }
 

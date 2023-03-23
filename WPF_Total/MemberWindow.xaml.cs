@@ -22,6 +22,7 @@ namespace zPage
     public partial class MemberWindow : Window
     {
         LandlordRepository landlordRepo;
+        PropertyRepository propertyRepository = new PropertyRepository();
         string searchMem;
         public MemberWindow(LandlordRepository landlordRepository)
         {
@@ -33,7 +34,18 @@ namespace zPage
         }
         public void LoadData()
         {
-            dg.ItemsSource = landlordRepo.GetLandlord();
+            IEnumerable<Landlord> landlords = landlordRepo.GetLandlord();
+            List<PropertyOwner> propertyOwners;
+            List<Property> properties;
+            foreach (Landlord landlord in landlords)
+            {
+                propertyOwners = propertyRepository.getPropertyOwnerListByOwner(landlord.LandlordId);
+                foreach (PropertyOwner propertyOwner in propertyOwners)
+                {
+                    /*properties = propertyRepository.GetPropertyByID */
+                }
+            }
+            dg.ItemsSource = landlords;
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)

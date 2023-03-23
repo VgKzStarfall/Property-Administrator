@@ -101,5 +101,20 @@ namespace DataAccess
 
             return propShow;
         }
+
+        public List<PropertyOwner> getPropertyOwnerListByOwner(int landlord)
+        {
+            List<PropertyOwner> properties;
+            try
+            {
+                var db = new PropMngContext();
+                properties = db.PropertyOwners.Where(property => property.LandlordId >= landlord).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return properties;
+        }
     }
 }
