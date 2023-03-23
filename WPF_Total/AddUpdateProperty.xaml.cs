@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DataAccess.DataAccess;
 using DataAccess.Repos;
+using System.Text.RegularExpressions;
 
 namespace zPage
 {
@@ -23,6 +24,7 @@ namespace zPage
     {
         bool isEdit;
         int id;
+        decimal oldPrice;
         PropertyRepository repository = new PropertyRepository();
         public AddUpdateProperty(bool isEditOrAdd, int idChange)
         {
@@ -40,6 +42,7 @@ namespace zPage
                     txtArea.Text = (p.Area).ToString();
                     txtPrice.Text = (p.Price).ToString();
                     txtContact.Text = p.Contact;
+                    oldPrice = (decimal)p.Price;
                     cbAvai.IsChecked = ("Y" == p.Available ? true : false);
                 }
             }
@@ -51,6 +54,8 @@ namespace zPage
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            Regex regexTel = new Regex(@"\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})? ?(\w{1,10}\s?\d{1,6})?");
+            Match match = regexTel.Match(txtContact.Text);
             bool check = true;
             if (txtName.Text=="")
             {
@@ -90,10 +95,7 @@ namespace zPage
                 MessageBox.Show("Please Input Property's Price In Digits");
                 check = false;
             }
-            try
-            {
-                int.Parse(txtContact.Text);
-            } catch (Exception)
+            if (!match.Success)
             {
                 MessageBox.Show("Please Input Property's Contact In Digits");
                 check = false;
@@ -109,6 +111,14 @@ namespace zPage
                 p.Available = ((bool)cbAvai.IsChecked ? "Y" : "N");
                 if (isEdit)
                 {
+                    if (oldPrice!=p.Price)
+                    {
+                        PriceHistory ph = new PriceHistory();
+                        ph.PropertyId = id;
+                        ph.Amount = p.Price;
+                        ph.Date = DateTime.Now;
+                        repository.addPriceHist(ph);
+                    }
                     p.PropertyId = id;
                     repository.UpdateProperty(p);
                     MessageBox.Show("Update Successfully.");
@@ -116,6 +126,12 @@ namespace zPage
                 else
                 {
                     repository.InsertProperty(p);
+                    Property pIn = repository.getCurrentlyInsert(p);
+                    PriceHistory ph = new PriceHistory();
+                    ph.PropertyId = pIn.PropertyId;
+                    ph.Amount = p.Price;
+                    ph.Date = DateTime.Now;
+                    repository.addPriceHist(ph);
                     MessageBox.Show("Insert successfully.");
                 }
                 this.Close();

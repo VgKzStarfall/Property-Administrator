@@ -146,6 +146,22 @@ namespace DataAccess
             }
         }
 
+        public Property getCurrentlyInsert(Property prop)
+        {
+            List<Property> p = new List<Property>();
+            try
+            {
+                var db = new PropMngContext();
+                p = db.Properties.Where(p => p.Name == prop.Name && p.Location == prop.Location && p.Price == prop.Price && p.Area == prop.Area
+                && p.Contact == prop.Contact && p.Available == prop.Available).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return p[p.Count - 1];
+        }
+
         public void Update(Property prop)
         {
             try
