@@ -26,7 +26,7 @@
         <Button Name="btnUpdate" Content="Modify" HorizontalAlignment="Right" VerticalAlignment="Top" Height="40" Width="70" Margin="0,156,39,0" Click="btnUpdate_Click" Grid.Column="1" BorderBrush="White" Background="Red" FontSize="11" RenderTransformOrigin="1.014,1.076"/>
         <Button Name="btnCreate" Content="New" HorizontalAlignment="Right" Margin="0,111,39,0" VerticalAlignment="Top" Height="40" Width="70" Click="btnCreate_Click" BorderBrush="White" Background="Red" FontSize="11" Grid.Column="1"/>
         <TextBox Name="txtSearch" HorizontalAlignment="Left" Margin="137,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="396" Height="27" Grid.ColumnSpan="2"/>
-        <Button Name="btnSearch" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="116" Margin="209,87,0,0" Click="btnSearch_Click" Grid.Column="1" RenderTransformOrigin="-0.333,0.779" BorderBrush="White" Background="Red" FontSize="11"/>
+        <Button Name="btnSearch" Content="Filter" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="116" Margin="209,87,0,0" Click="btnSearch_Click" Grid.Column="1" RenderTransformOrigin="-0.333,0.779" BorderBrush="White" Background="Red" FontSize="11"/>
         <ComboBox Name="searchType" HorizontalAlignment="Left" Margin="17,87,0,0" VerticalAlignment="Top" Width="120" Height="27" SelectedValuePath="Content" DropDownClosed="searchType_DropDownClosed" materialDesign:HintAssist.Hint="Name">
             <ComboBoxItem Content="PropertyId"/>
             <ComboBoxItem Content="Name"/>
