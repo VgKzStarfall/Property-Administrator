@@ -117,5 +117,11 @@ namespace zPage
             window.Closing += ReloadData;
             window.ShowDialog();
         }
+
+        private void btnPriceHist_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new PriceHistoryWindow(prop);
+            window.ShowDialog();
+        }
     }
 }

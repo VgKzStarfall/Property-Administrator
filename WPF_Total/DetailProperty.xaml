@@ -37,6 +37,7 @@
         <Rectangle HorizontalAlignment="Left" Height="2" Margin="108,81,0,0" VerticalAlignment="Top" Width="289" Fill="#FFCE00FF"/>
         <Image HorizontalAlignment="Left" Height="80" Margin="154,388,0,0" VerticalAlignment="Top" Width="95" Source="/judge.png" Stretch="Fill"/>
         <Rectangle HorizontalAlignment="Left" Height="270" Margin="426,117,0,0" VerticalAlignment="Top" Width="2" Fill="#FFCE00FF"/>
+        <Button x:Name="btnPriceHist" Content="History" FontSize="20" HorizontalAlignment="Left" Margin="313,0,0,0" VerticalAlignment="Center" Height="43" Width="108" Click="btnPriceHist_Click"/>
 
     </Grid>
 </Window>

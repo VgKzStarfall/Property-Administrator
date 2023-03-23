@@ -23,6 +23,7 @@ namespace zPage
     {
         bool isEdit;
         int id;
+        decimal oldPrice;
         PropertyRepository repository = new PropertyRepository();
         public AddUpdateProperty(bool isEditOrAdd, int idChange)
         {
@@ -40,6 +41,7 @@ namespace zPage
                     txtArea.Text = (p.Area).ToString();
                     txtPrice.Text = (p.Price).ToString();
                     txtContact.Text = p.Contact;
+                    oldPrice = (decimal)p.Price;
                     cbAvai.IsChecked = ("Y" == p.Available ? true : false);
                 }
             }
@@ -109,6 +111,14 @@ namespace zPage
                 p.Available = ((bool)cbAvai.IsChecked ? "Y" : "N");
                 if (isEdit)
                 {
+                    if (oldPrice!=p.Price)
+                    {
+                        PriceHistory ph = new PriceHistory();
+                        ph.PropertyId = id;
+                        ph.Amount = p.Price;
+                        ph.Date = DateTime.Now;
+                        repository.addPriceHist(ph);
+                    }
                     p.PropertyId = id;
                     repository.UpdateProperty(p);
                     MessageBox.Show("Update Successfully.");
@@ -116,6 +126,12 @@ namespace zPage
                 else
                 {
                     repository.InsertProperty(p);
+                    Property pIn = repository.getCurrentlyInsert();
+                    PriceHistory ph = new PriceHistory();
+                    ph.PropertyId = pIn.PropertyId;
+                    ph.Amount = p.Price;
+                    ph.Date = DateTime.Now;
+                    repository.addPriceHist(ph);
                     MessageBox.Show("Insert successfully.");
                 }
                 this.Close();
