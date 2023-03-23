@@ -80,5 +80,23 @@ namespace zPage
             window.Closing += ReloadData;
             window.ShowDialog();
         }
+
+        private void btnEndOwner_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Do you want to end the currently ownership for this property?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                repos.endOwner(prop);
+                LoadData();
+                MessageBox.Show("End Ownership Successfully");
+            }
+        }
+
+        private void btnEditFeature_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new FeatureWindow(prop);
+            window.Closing += ReloadData;
+            window.ShowDialog();
+        }
     }
 }
