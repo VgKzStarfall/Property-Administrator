@@ -5,20 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:zPage"
         mc:Ignorable="d"
-        Title="MemberWindow" Height="450" Width="800">
+        Title="Administrator" Height="470" Width="810" ResizeMode="NoResize">
     <Grid>
-        <TextBlock Text="Member Management" TextAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="71" Width="800" FontSize="50"/>
-        <DataGrid Name="dg" Margin="0,151,0,0" Height="218" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800" ColumnWidth="*" MouseDoubleClick="dg_MouseDoubleClick"/>
-        <Button Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="676,369,0,0" VerticalAlignment="Top" Height="33" Width="97" Click="btnDelete_Click"/>
-        <Button Name="btnUpdate" Content="Update" HorizontalAlignment="Center" VerticalAlignment="Top" Height="33" Width="96" Margin="0,369,0,0" Click="btnUpdate_Click"/>
-        <Button Name="btnCreate" Content="Create" HorizontalAlignment="Right" Margin="0,369,662,0" VerticalAlignment="Top" Height="33" Width="97" Click="btnCreate_Click"/>
-        <TextBox Name="txtSearch" HorizontalAlignment="Left" Margin="264,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Height="27" Grid.RowSpan="2"/>
-        <Button Name="btnSearch" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="96" Margin="588,91,0,0" Click="btnSearch_Click" Grid.RowSpan="2"/>
-        <ComboBox Name="searchType" HorizontalAlignment="Left" Margin="144,91,0,0" VerticalAlignment="Top" Width="120" Height="27" SelectedValuePath="Content" DropDownClosed="searchType_DropDownClosed">
-            <ComboBoxItem Content="CompanyName"/>
-            <ComboBoxItem Content="City"/>
-            <ComboBoxItem Content="Country"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="LANDLORD DATA" TextAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="61" Width="443" FontSize="48" Foreground="Red" FontWeight="Bold" Grid.Column="1" Margin="84,10,0,0"/>
+        <DataGrid Name="dg" AutoGenerateColumns="False" Height="277" VerticalAlignment="Top" HorizontalAlignment="Left" Width="658" ColumnWidth="*" MouseDoubleClick="dg_MouseDoubleClick" Grid.ColumnSpan="2" IsReadOnly="True" Margin="9,128,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="50" Binding="{Binding LandlordId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Width="100" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Tel" Width="120" Binding="{Binding Tel}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Location" Width="120" Binding="{Binding Location}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Citizen ID" Width="120" Binding="{Binding CitizenId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Property" Binding="{Binding PropertyOwners}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Name="btnDelete" Content="Extermination" HorizontalAlignment="Left" Margin="677,378,0,0" VerticalAlignment="Top" Height="27" Width="112" Click="btnDelete_Click" Grid.Column="1" Background="Red" FontSize="12" BorderBrush="White" Cursor="Cross"/>
+        <Button Name="btnUpdate" Content="Modify" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="70" Margin="698,156,0,0" Click="btnUpdate_Click" Grid.Column="1" Background="Red" FontSize="11" BorderBrush="White"/>
+        <Button Name="btnCreate" Content="New" HorizontalAlignment="Left" Margin="698,111,0,0" VerticalAlignment="Top" Height="40" Width="70" Click="btnCreate_Click" Grid.Column="1" Background="Red" FontSize="11" BorderBrush="White"/>
+        <TextBox Name="txtSearch" HorizontalAlignment="Left" Margin="129,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398" Height="27" Grid.Column="1"/>
+        <Button Name="btnSearch" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="112" Margin="555,79,0,0" Click="btnSearch_Click" Grid.Column="1" Background="Red" BorderBrush="White"/>
+        <ComboBox Name="searchType" HorizontalAlignment="Left" Margin="9,79,0,0" VerticalAlignment="Top" Width="120" Height="27" SelectedValuePath="Name" DropDownClosed="searchType_DropDownClosed" Grid.Column="1">
+            <ComboBoxItem Content="LandlordId"/>
+            <ComboBoxItem Content="Name"/>
+            <ComboBoxItem Content="Tel"/>
+            <ComboBoxItem Content="Location"/>
+            <ComboBoxItem Content="CitizenId"/>
         </ComboBox>
+        <Image x:Name="icon" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="73" Margin="10,7,0,0" VerticalAlignment="Top" Width="69" Source="/admin.png" OpacityMask="Red"/>
+        <Image x:Name="hammer" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="60" Margin="698,313,0,0" VerticalAlignment="Top" Width="70" Source="/judge.png" Stretch="Fill"/>
+        <Rectangle Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="2" Margin="532,42,0,0" VerticalAlignment="Top" Width="135" Fill="Red"/>
+        <Image x:Name="bg" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="96" Margin="672,10,0,0" VerticalAlignment="Top" Width="128" Source="/gv.jpg" Stretch="Fill" Opacity="0.5"/>
 
     </Grid>
 </Window>

@@ -115,5 +115,6 @@ namespace zPage
                 dg.ItemsSource = landlordRepo.GetListSearchByCity(txtSearch.Text);
             }        
         }
+
     }
 }

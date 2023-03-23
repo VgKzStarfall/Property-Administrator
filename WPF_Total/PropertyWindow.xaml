@@ -5,30 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:zPage"
-        Title="PropertyWindow" Height="450" Width="800">
+        Title="Administrator" Height="470" Width="810" ResizeMode="NoResize">
     <Grid>
-        <TextBlock Text="Property Management" TextAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="71" Width="800" FontSize="50"/>
-        <DataGrid Name="dg" AutoGenerateColumns="False" Margin="0,151,0,0" Height="218" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800" ColumnWidth="*" MouseDoubleClick="dg_MouseDoubleClick">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="26*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="PROPERTY DATA" TextAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="71" Width="435" FontSize="50" Foreground="Red" Margin="79,10,0,0" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <DataGrid Name="dg" AutoGenerateColumns="False" Margin="24,125,0,0" Height="269" VerticalAlignment="Top" HorizontalAlignment="Left" Width="643" ColumnWidth="*" MouseDoubleClick="dg_MouseDoubleClick" IsReadOnly="True" Grid.ColumnSpan="2">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Location" Binding="{Binding Location}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Area" Binding="{Binding Area}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Contact" Binding="{Binding Contact}"></DataGridTextColumn>
+                <DataGridTextColumn Header="ID" Width="50" Binding="{Binding PropertyId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Width="100" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Location" Width="100" Binding="{Binding Location}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Area" Width="100" Binding="{Binding Area}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Price" Width="100" Binding="{Binding Price}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Contact" Width="100" Binding="{Binding Contact}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Available" Binding="{Binding Available}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="676,369,0,0" VerticalAlignment="Top" Height="33" Width="97" Click="btnDelete_Click"/>
-        <Button Name="btnUpdate" Content="Update" HorizontalAlignment="Center" VerticalAlignment="Top" Height="33" Width="96" Margin="0,369,0,0" Click="btnUpdate_Click"/>
-        <Button Name="btnCreate" Content="Create" HorizontalAlignment="Right" Margin="0,369,662,0" VerticalAlignment="Top" Height="33" Width="97" Click="btnCreate_Click"/>
-        <TextBox Name="txtSearch" HorizontalAlignment="Left" Margin="264,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Height="27" Grid.RowSpan="2"/>
-        <Button Name="btnSearch" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="96" Margin="588,91,0,0" Click="btnSearch_Click" Grid.RowSpan="2"/>
-        <ComboBox Name="searchType" HorizontalAlignment="Left" Margin="144,91,0,0" VerticalAlignment="Top" Width="120" Height="27" SelectedValuePath="Content" DropDownClosed="searchType_DropDownClosed" materialDesign:HintAssist.Hint="Name">
+        <Button Name="btnDelete" Content="Extermination" HorizontalAlignment="Left" Margin="342,361,0,0" VerticalAlignment="Top" Height="33" Width="104" Click="btnDelete_Click" Grid.Column="1" BorderBrush="White" Background="Red" FontSize="11"/>
+        <Button Name="btnUpdate" Content="Modify" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="70" Margin="359,156,0,0" Click="btnUpdate_Click" Grid.Column="1" BorderBrush="White" Background="Red" FontSize="11" RenderTransformOrigin="1.014,1.076"/>
+        <Button Name="btnCreate" Content="New" HorizontalAlignment="Right" Margin="0,111,39,0" VerticalAlignment="Top" Height="40" Width="70" Click="btnCreate_Click" BorderBrush="White" Background="Red" FontSize="11" Grid.Column="1"/>
+        <TextBox Name="txtSearch" HorizontalAlignment="Left" Margin="144,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="396" Height="27" Grid.ColumnSpan="2"/>
+        <Button Name="btnSearch" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="96" Margin="229,87,0,0" Click="btnSearch_Click" Grid.Column="1" RenderTransformOrigin="-0.333,0.779" BorderBrush="White" Background="Red" FontSize="11"/>
+        <ComboBox Name="searchType" HorizontalAlignment="Left" Margin="24,86,0,0" VerticalAlignment="Top" Width="120" Height="27" SelectedValuePath="Content" DropDownClosed="searchType_DropDownClosed" materialDesign:HintAssist.Hint="Name">
+            <ComboBoxItem Content="PropertyId"/>
             <ComboBoxItem Content="Name"/>
             <ComboBoxItem Content="Location"/>
             <ComboBoxItem Content="Area"/>
             <ComboBoxItem Content="Price"/>
+            <ComboBoxItem Content="Contact"/>
         </ComboBox>
-        
+        <Image x:Name="icon" HorizontalAlignment="Left" Height="73" Margin="10,7,0,0" VerticalAlignment="Top" Width="69" Source="/admin.png" OpacityMask="Red"/>
+        <Image x:Name="hammer" HorizontalAlignment="Left" Height="60" Margin="359,301,0,0" VerticalAlignment="Top" Width="70" Source="/judge.png" Stretch="Fill" Grid.Column="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="2" Margin="190,42,0,0" VerticalAlignment="Top" Width="135" Fill="Red" Grid.Column="1"/>
+        <Image x:Name="bg" HorizontalAlignment="Left" Height="96" Margin="330,10,0,0" VerticalAlignment="Top" Width="128" Source="/gv.jpg" Stretch="Fill" Opacity="0.5" Grid.Column="1"/>
+
     </Grid>
 </Window>
