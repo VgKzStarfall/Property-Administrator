@@ -6,12 +6,12 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         xmlns:local="clr-namespace:zPage"
         mc:Ignorable="d"
-        Title="Administrator" Height="454" Width="487" ResizeMode="NoResize">
-    <Grid>
+        Title="Administrator" Height="495" Width="487" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,-6">
 
-        <Image x:Name="bg" HorizontalAlignment="Center" Height="307" VerticalAlignment="Center" Width="415" Source="/gv.jpg" Stretch="Fill" Opacity="0.25"/>
+        <Image x:Name="bg" HorizontalAlignment="Left" Height="307" VerticalAlignment="Top" Width="422" Source="/gv.jpg" Stretch="Fill" Opacity="0.25" Margin="29,66,0,0"/>
 
-        <Label x:Name="lbTitle" Content="Landlord Registering" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,17,0,0" Foreground="#DD9F00D0" FontWeight="Bold"/>
+        <Label x:Name="lbTitle" Content="Landlord Info" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,17,0,0" Foreground="#DD9F00D0" FontWeight="Bold"/>
         <TextBox x:Name="txtName" Margin="178,75,36,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
         <materialDesign:PackIcon Kind="People" Margin="21,105,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
         <Label Content="Name" HorizontalAlignment="Left" Margin="37,94,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
@@ -22,7 +22,7 @@
         <Label Content="Citizen ID" HorizontalAlignment="Left" Margin="37,226,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
         <TextBox x:Name="txtTel" Margin="178,274,36,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="46"/>
         <Label Content="Tel" HorizontalAlignment="Left" Margin="37,294,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.986,-0.939"/>
-        <Button x:Name="btnSubmit" Content="Register" HorizontalAlignment="Left" Margin="323,373,0,0" FontSize="20" Width="128" Click="btnSubmit_Click" RenderTransformOrigin="0.527,-0.75" Height="44" VerticalAlignment="Top"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="323,373,0,0" FontSize="20" Width="128" Click="btnSubmit_Click" RenderTransformOrigin="0.527,-0.75" Height="44" VerticalAlignment="Top"/>
         <Button x:Name="btnCancel" Content="Cancel" Margin="29,373,0,0" FontSize="20" Click="btnCancel_Click" RenderTransformOrigin="1.523,0.543" HorizontalAlignment="Left" Width="128" Height="44" VerticalAlignment="Top"/>
         <materialDesign:PackIcon Kind="CardAccountDetails" Margin="21,237,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
         <materialDesign:PackIcon Kind="Phone" Margin="21,304,0,0" Foreground="#FF64DD17" RenderTransformOrigin="1.25,0.724"/>
