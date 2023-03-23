@@ -112,7 +112,7 @@ namespace DataAccess
                 PropertyRepository propertyRepository = new PropertyRepository();
                 myProperties = new List<PropertyOwnerShow>();
                 var db = new PropMngContext();
-                properties = db.PropertyOwners.Where(property => property.LandlordId >= landlord).ToList();
+                properties = db.PropertyOwners.Where(property => property.LandlordId == landlord && property.OwnEndDate == null).ToList();
 
                 foreach (var prop in properties)
                 {

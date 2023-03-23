@@ -111,7 +111,7 @@ namespace zPage
             if("Name".Equals(searchMem))
             {
                 dg.ItemsSource = landlordRepo.GetListSearchByName(txtSearch.Text);
-            } else if ("City".Equals(searchMem))
+            } else if ("Location".Equals(searchMem))
             {
                 dg.ItemsSource = landlordRepo.GetListSearchByCity(txtSearch.Text);
             }        
