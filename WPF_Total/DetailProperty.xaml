@@ -22,7 +22,7 @@
         <CheckBox Name="cbAvai" Content="Available" HorizontalAlignment="Left" Margin="25,348,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Medium" Width="192"/>
         <Label Content="Features" FontSize="30" HorizontalAlignment="Left" Margin="484,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
         <Label Content="Owners History" FontSize="30" HorizontalAlignment="Left" Margin="484,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.006,-0.221" FontWeight="Bold" Foreground="#FFAC18ED"/>
-        <DataGrid Name="dgHist" Margin="465,247,0,77" ColumnWidth="*" AutoGenerateColumns="False">
+        <DataGrid Name="dgHist" IsReadOnly="True" Margin="465,247,0,77" ColumnWidth="*" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Owner" Binding="{Binding LandlordName}"></DataGridTextColumn>
                 <DataGridTextColumn Header="From" Binding="{Binding OwnStartDate}"></DataGridTextColumn>

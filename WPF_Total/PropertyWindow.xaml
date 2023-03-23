@@ -14,7 +14,6 @@
         <TextBlock Text="PROPERTY DATA" TextAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="71" Width="435" FontSize="50" Foreground="Red" Margin="79,10,0,0" FontWeight="Bold" Grid.ColumnSpan="2"/>
         <DataGrid Name="dg" AutoGenerateColumns="False" Margin="17,131,0,0" Height="269" VerticalAlignment="Top" HorizontalAlignment="Left" Width="650" ColumnWidth="*" MouseDoubleClick="dg_MouseDoubleClick" IsReadOnly="True" Grid.ColumnSpan="2">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Width="50" Binding="{Binding PropertyId}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Name" Width="100" Binding="{Binding Name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Location" Width="100" Binding="{Binding Location}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Area" Width="100" Binding="{Binding Area}"></DataGridTextColumn>
@@ -24,7 +23,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Name="btnDelete" Content="Removal" HorizontalAlignment="Left" Margin="342,361,0,0" VerticalAlignment="Top" Height="33" Width="104" Click="btnDelete_Click" Grid.Column="1" BorderBrush="White" Background="Red" FontSize="11"/>
-        <Button Name="btnUpdate" Content="Modify" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="70" Margin="359,156,0,0" Click="btnUpdate_Click" Grid.Column="1" BorderBrush="White" Background="Red" FontSize="11" RenderTransformOrigin="1.014,1.076"/>
+        <Button Name="btnUpdate" Content="Modify" HorizontalAlignment="Right" VerticalAlignment="Top" Height="40" Width="70" Margin="0,156,39,0" Click="btnUpdate_Click" Grid.Column="1" BorderBrush="White" Background="Red" FontSize="11" RenderTransformOrigin="1.014,1.076"/>
         <Button Name="btnCreate" Content="New" HorizontalAlignment="Right" Margin="0,111,39,0" VerticalAlignment="Top" Height="40" Width="70" Click="btnCreate_Click" BorderBrush="White" Background="Red" FontSize="11" Grid.Column="1"/>
         <TextBox Name="txtSearch" HorizontalAlignment="Left" Margin="137,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="396" Height="27" Grid.ColumnSpan="2"/>
         <Button Name="btnSearch" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="116" Margin="209,87,0,0" Click="btnSearch_Click" Grid.Column="1" RenderTransformOrigin="-0.333,0.779" BorderBrush="White" Background="Red" FontSize="11"/>

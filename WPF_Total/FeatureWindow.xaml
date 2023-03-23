@@ -8,7 +8,7 @@
         Title="FeatureWindow" Height="450" Width="400">
     <Grid>
         <Label Name="lbTitle" Content="Features For Name" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="45" Width="276"/>
-        <DataGrid Name="dgFeatures" Margin="0,90,0,108" AutoGenerateColumns="False">
+        <DataGrid Name="dgFeatures" IsReadOnly="True" Margin="0,90,0,108" AutoGenerateColumns="False" ColumnWidth="*">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Feature Description" Binding="{Binding FeatureDescription}"></DataGridTextColumn>
             </DataGrid.Columns>
