@@ -28,6 +28,7 @@ namespace zPage
             InitializeComponent();
             prop = p;
             LoadData();
+            lbTitle.Content = lbTitle.Content.ToString().Replace("Name", p.Name);
         }
 
         private void LoadData()
