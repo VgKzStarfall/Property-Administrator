@@ -52,7 +52,7 @@ namespace zPage
         {
             Regex regexTel = new Regex(@"^[0-9]{10}$");
             Regex regexId = new Regex(@"^[0-9]{12}$");
-            Regex regexName = new Regex(@"^([a-zA-Z]{1,30}\s[a-zA-Z]{1,30}){1,10}$");
+            Regex regexName = new Regex(@"^([a-zA-Z]{1,30}\D+){1,10}$");
             Match match = regexTel.Match(txtTel.Text);
             Match matchCitizenId = regexId.Match(txtCitizenId.Text);
             Match matchName = regexName.Match(txtName.Text);
